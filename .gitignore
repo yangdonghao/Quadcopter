@@ -1,2 +1,2 @@
-MDK/Objects
-Quadcopter.uvguix.Timer
+*.o
+*.crf
