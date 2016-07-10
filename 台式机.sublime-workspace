@@ -92,7 +92,7 @@
 				"LaTeXing: Word to Phrases Dictionary"
 			]
 		],
-		"width": 464.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -114,9 +114,13 @@
 	},
 	"expanded_folders":
 	[
+		"/C/Users/YDH/Documents/GitHub2/Quadcopter/MDK",
+		"/C/Users/YDH/Documents/GitHub2/Quadcopter/MDK/RTE"
 	],
 	"file_history":
 	[
+		"/C/Users/YDH/Documents/GitHub2/Quadcopter/README.md",
+		"/C/Users/YDH/Documents/GitHub2/Quadcopter/MDK/RTE/RTE_Components.h",
 		"/C/Users/YDH/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/YDH/Documents/GitHub2/Quadcopter/MDK/RTE/Device/STM32F407VGTx/STCubeGenerated/Src/main.c",
 		"/C/Users/Timer/AppData/Roaming/Sublime Text 3/Packages/User/CTags.sublime-settings",
@@ -242,9 +246,7 @@
 		"/D/Study/非线性自适应/报告/Lab1_style_ne/Lab1_ad_21.tex",
 		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty",
 		"/D/Study/非线性自适应/报告/Lab1_style_ne/G2-105.sty",
-		"/D/Study/非线性自适应/报告/Lab1_style_ne/G7-32.sty",
-		"/C/Users/Timer/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/D/Study/非线性数学模型/实验报告/Lab1/Lab1_Math_model_3.tex"
+		"/D/Study/非线性自适应/报告/Lab1_style_ne/G7-32.sty"
 	],
 	"find":
 	{
@@ -433,7 +435,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
-	"project": "笔记本.sublime-project",
+	"project": "台式机.sublime-project",
 	"replace":
 	{
 		"height": 52.0
