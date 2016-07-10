@@ -600,124 +600,124 @@ Section Cross References
     stm32f4xx_it.o(i.DMA2_Stream7_IRQHandler) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_IRQHandler) for HAL_DMA_IRQHandler
     stm32f4xx_it.o(i.DMA2_Stream7_IRQHandler) refers to main.o(.bss) for hdma_usart1_tx
     stm32f4xx_it.o(i.EXTI4_IRQHandler) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler) for HAL_GPIO_EXTI_IRQHandler
-    stm32f4xx_it.o(i.EXTI4_IRQHandler) refers to mpu_1.o(.bss) for hal
+    stm32f4xx_it.o(i.EXTI4_IRQHandler) refers to mpu.o(.bss) for hal
     stm32f4xx_it.o(i.SysTick_Handler) refers to stm32f4xx_hal.o(i.HAL_IncTick) for HAL_IncTick
     stm32f4xx_it.o(i.SysTick_Handler) refers to stm32f4xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) for HAL_SYSTICK_IRQHandler
     stm32f4xx_it.o(i.SysTick_Handler) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
     stm32f4xx_it.o(i.SysTick_Handler) refers to stm32f4xx_it.o(.data) for Timebase_500ms_even_flag
     stm32f4xx_it.o(i.USART1_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) for HAL_UART_IRQHandler
     stm32f4xx_it.o(i.USART1_IRQHandler) refers to main.o(.bss) for huart1
-    mpu_1.o(i.Mpu_data_refresh) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
-    mpu_1.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_lp_motion_interrupt) for mpu_lp_motion_interrupt
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_accel_was_turned_off) for inv_accel_was_turned_off
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_gyro_was_turned_off) for inv_gyro_was_turned_off
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_compass_was_turned_off) for inv_compass_was_turned_off
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_quaternion_sensor_was_turned_off) for inv_quaternion_sensor_was_turned_off
-    mpu_1.o(i.Mpu_data_refresh) refers to inv_mpu_dmp_motion_driver.o(i.dmp_read_fifo) for dmp_read_fifo
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_gyro) for inv_build_gyro
-    mpu_1.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_get_temperature) for mpu_get_temperature
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_temp) for inv_build_temp
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_accel) for inv_build_accel
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_quat) for inv_build_quat
-    mpu_1.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_read_fifo) for mpu_read_fifo
-    mpu_1.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_get_compass_reg) for mpu_get_compass_reg
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_compass) for inv_build_compass
-    mpu_1.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_execute_on_data) for inv_execute_on_data
-    mpu_1.o(i.Mpu_data_refresh) refers to mpu_1.o(i.read_from_mpl) for read_from_mpl
-    mpu_1.o(i.Mpu_data_refresh) refers to mpu_1.o(.data) for timestamp
-    mpu_1.o(i.Mpu_data_refresh) refers to mpu_1.o(.bss) for hal
-    mpu_1.o(i.handle_input) refers to mpu_1.o(i.setup_gyro) for setup_gyro
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_accel_was_turned_off) for inv_accel_was_turned_off
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_gyro_was_turned_off) for inv_gyro_was_turned_off
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_compass_was_turned_off) for inv_compass_was_turned_off
-    mpu_1.o(i.handle_input) refers to mpu_1.o(i.send_status_compass) for send_status_compass
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_reg_dump) for mpu_reg_dump
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_lp_accel_mode) for mpu_lp_accel_mode
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_set_int_latched) for mpu_set_int_latched
-    mpu_1.o(i.handle_input) refers to mpu_1.o(i.run_self_test) for run_self_test
-    mpu_1.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_fifo_rate) for dmp_set_fifo_rate
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_set_quat_sample_rate) for inv_set_quat_sample_rate
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_set_sample_rate) for mpu_set_sample_rate
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_set_gyro_sample_rate) for inv_set_gyro_sample_rate
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_set_accel_sample_rate) for inv_set_accel_sample_rate
-    mpu_1.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_interrupt_mode) for dmp_set_interrupt_mode
-    mpu_1.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_pedometer_step_count) for dmp_set_pedometer_step_count
-    mpu_1.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_pedometer_walk_time) for dmp_set_pedometer_walk_time
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_set_dmp_state) for mpu_set_dmp_state
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_configure_fifo) for mpu_configure_fifo
-    mpu_1.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_get_fifo_rate) for dmp_get_fifo_rate
-    mpu_1.o(i.handle_input) refers to data_builder.o(i.inv_quaternion_sensor_was_turned_off) for inv_quaternion_sensor_was_turned_off
-    mpu_1.o(i.handle_input) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
-    mpu_1.o(i.handle_input) refers to inv_mpu.o(i.mpu_get_sample_rate) for mpu_get_sample_rate
-    mpu_1.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_enable_feature) for dmp_enable_feature
-    mpu_1.o(i.handle_input) refers to mpu_1.o(.bss) for hal
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_init) for mpu_init
-    mpu_1.o(i.mpu_init_all) refers to main.o(i.Error_Handler) for Error_Handler
-    mpu_1.o(i.mpu_init_all) refers to mpl.o(i.inv_init_mpl) for inv_init_mpl
-    mpu_1.o(i.mpu_init_all) refers to quaternion_supervisor.o(.text) for inv_enable_quaternion
-    mpu_1.o(i.mpu_init_all) refers to fusion_9axis.o(.text) for inv_enable_9x_sensor_fusion
-    mpu_1.o(i.mpu_init_all) refers to fast_no_motion.o(.text) for inv_enable_fast_nomot
-    mpu_1.o(i.mpu_init_all) refers to gyro_tc.o(.text) for inv_enable_gyro_tc
-    mpu_1.o(i.mpu_init_all) refers to compass_vec_cal.o(.text) for inv_enable_vector_compass_cal
-    mpu_1.o(i.mpu_init_all) refers to mag_disturb.o(.text) for inv_enable_magnetic_disturbance
-    mpu_1.o(i.mpu_init_all) refers to empl_outputs.o(i.inv_enable_eMPL_outputs) for inv_enable_eMPL_outputs
-    mpu_1.o(i.mpu_init_all) refers to mpl.o(i.inv_start_mpl) for inv_start_mpl
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_sensors) for mpu_set_sensors
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_configure_fifo) for mpu_configure_fifo
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_sample_rate) for mpu_set_sample_rate
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_compass_sample_rate) for mpu_set_compass_sample_rate
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_sample_rate) for mpu_get_sample_rate
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_gyro_fsr) for mpu_get_gyro_fsr
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_accel_fsr) for mpu_get_accel_fsr
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_compass_fsr) for mpu_get_compass_fsr
-    mpu_1.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_gyro_sample_rate) for inv_set_gyro_sample_rate
-    mpu_1.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_accel_sample_rate) for inv_set_accel_sample_rate
-    mpu_1.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_compass_sample_rate) for inv_set_compass_sample_rate
-    mpu_1.o(i.mpu_init_all) refers to ml_math_func.o(i.inv_orientation_matrix_to_scalar) for inv_orientation_matrix_to_scalar
-    mpu_1.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_gyro_orientation_and_scale) for inv_set_gyro_orientation_and_scale
-    mpu_1.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_accel_orientation_and_scale) for inv_set_accel_orientation_and_scale
-    mpu_1.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_compass_orientation_and_scale) for inv_set_compass_orientation_and_scale
-    mpu_1.o(i.mpu_init_all) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_load_motion_driver_firmware) for dmp_load_motion_driver_firmware
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_orientation) for dmp_set_orientation
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_enable_feature) for dmp_enable_feature
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_fifo_rate) for dmp_set_fifo_rate
-    mpu_1.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_dmp_state) for mpu_set_dmp_state
-    mpu_1.o(i.mpu_init_all) refers to mpu_1.o(.data) for gyro_pdata
-    mpu_1.o(i.mpu_init_all) refers to mpu_1.o(.bss) for hal
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_quat) for inv_get_sensor_type_quat
-    mpu_1.o(i.read_from_mpl) refers to log_stm32.o(i.eMPL_send_quat) for eMPL_send_quat
-    mpu_1.o(i.read_from_mpl) refers to log_stm32.o(i.eMPL_send_data) for eMPL_send_data
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_accel) for inv_get_sensor_type_accel
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_gyro) for inv_get_sensor_type_gyro
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_compass) for inv_get_sensor_type_compass
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_euler) for inv_get_sensor_type_euler
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_rot_mat) for inv_get_sensor_type_rot_mat
-    mpu_1.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_heading) for inv_get_sensor_type_heading
-    mpu_1.o(i.read_from_mpl) refers to hal_outputs.o(i.inv_get_sensor_type_linear_acceleration) for inv_get_sensor_type_linear_acceleration
-    mpu_1.o(i.read_from_mpl) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    mpu_1.o(i.read_from_mpl) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
-    mpu_1.o(i.read_from_mpl) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
-    mpu_1.o(i.read_from_mpl) refers to inv_mpu_dmp_motion_driver.o(i.dmp_get_pedometer_step_count) for dmp_get_pedometer_step_count
-    mpu_1.o(i.read_from_mpl) refers to inv_mpu_dmp_motion_driver.o(i.dmp_get_pedometer_walk_time) for dmp_get_pedometer_walk_time
-    mpu_1.o(i.read_from_mpl) refers to message_layer.o(i.inv_get_message_level_0) for inv_get_message_level_0
-    mpu_1.o(i.read_from_mpl) refers to mpu_1.o(.bss) for hal
-    mpu_1.o(i.run_self_test) refers to inv_mpu.o(i.mpu_run_self_test) for mpu_run_self_test
-    mpu_1.o(i.run_self_test) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
-    mpu_1.o(i.run_self_test) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    mpu_1.o(i.run_self_test) refers to inv_mpu.o(i.mpu_get_accel_sens) for mpu_get_accel_sens
-    mpu_1.o(i.run_self_test) refers to data_builder.o(i.inv_set_accel_bias) for inv_set_accel_bias
-    mpu_1.o(i.run_self_test) refers to inv_mpu.o(i.mpu_get_gyro_sens) for mpu_get_gyro_sens
-    mpu_1.o(i.run_self_test) refers to data_builder.o(i.inv_set_gyro_bias) for inv_set_gyro_bias
-    mpu_1.o(i.send_status_compass) refers to data_builder.o(i.inv_get_compass_set) for inv_get_compass_set
-    mpu_1.o(i.send_status_compass) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
-    mpu_1.o(i.send_status_compass) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
-    mpu_1.o(i.setup_gyro) refers to inv_mpu.o(i.mpu_set_sensors) for mpu_set_sensors
-    mpu_1.o(i.setup_gyro) refers to inv_mpu.o(i.mpu_configure_fifo) for mpu_configure_fifo
-    mpu_1.o(i.setup_gyro) refers to inv_mpu.o(i.mpu_get_sample_rate) for mpu_get_sample_rate
-    mpu_1.o(i.setup_gyro) refers to data_builder.o(i.inv_set_accel_sample_rate) for inv_set_accel_sample_rate
-    mpu_1.o(i.setup_gyro) refers to mpu_1.o(.bss) for hal
-    mpu_1.o(.data) refers to mpu_1.o(.conststring) for .conststring
+    mpu.o(i.Mpu_data_refresh) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    mpu.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_lp_motion_interrupt) for mpu_lp_motion_interrupt
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_accel_was_turned_off) for inv_accel_was_turned_off
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_gyro_was_turned_off) for inv_gyro_was_turned_off
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_compass_was_turned_off) for inv_compass_was_turned_off
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_quaternion_sensor_was_turned_off) for inv_quaternion_sensor_was_turned_off
+    mpu.o(i.Mpu_data_refresh) refers to inv_mpu_dmp_motion_driver.o(i.dmp_read_fifo) for dmp_read_fifo
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_gyro) for inv_build_gyro
+    mpu.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_get_temperature) for mpu_get_temperature
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_temp) for inv_build_temp
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_accel) for inv_build_accel
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_quat) for inv_build_quat
+    mpu.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_read_fifo) for mpu_read_fifo
+    mpu.o(i.Mpu_data_refresh) refers to inv_mpu.o(i.mpu_get_compass_reg) for mpu_get_compass_reg
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_build_compass) for inv_build_compass
+    mpu.o(i.Mpu_data_refresh) refers to data_builder.o(i.inv_execute_on_data) for inv_execute_on_data
+    mpu.o(i.Mpu_data_refresh) refers to mpu.o(i.read_from_mpl) for read_from_mpl
+    mpu.o(i.Mpu_data_refresh) refers to mpu.o(.data) for timestamp
+    mpu.o(i.Mpu_data_refresh) refers to mpu.o(.bss) for hal
+    mpu.o(i.handle_input) refers to mpu.o(i.setup_gyro) for setup_gyro
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_accel_was_turned_off) for inv_accel_was_turned_off
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_gyro_was_turned_off) for inv_gyro_was_turned_off
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_compass_was_turned_off) for inv_compass_was_turned_off
+    mpu.o(i.handle_input) refers to mpu.o(i.send_status_compass) for send_status_compass
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_reg_dump) for mpu_reg_dump
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_lp_accel_mode) for mpu_lp_accel_mode
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_set_int_latched) for mpu_set_int_latched
+    mpu.o(i.handle_input) refers to mpu.o(i.run_self_test) for run_self_test
+    mpu.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_fifo_rate) for dmp_set_fifo_rate
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_set_quat_sample_rate) for inv_set_quat_sample_rate
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_set_sample_rate) for mpu_set_sample_rate
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_set_gyro_sample_rate) for inv_set_gyro_sample_rate
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_set_accel_sample_rate) for inv_set_accel_sample_rate
+    mpu.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_interrupt_mode) for dmp_set_interrupt_mode
+    mpu.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_pedometer_step_count) for dmp_set_pedometer_step_count
+    mpu.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_pedometer_walk_time) for dmp_set_pedometer_walk_time
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_set_dmp_state) for mpu_set_dmp_state
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_configure_fifo) for mpu_configure_fifo
+    mpu.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_get_fifo_rate) for dmp_get_fifo_rate
+    mpu.o(i.handle_input) refers to data_builder.o(i.inv_quaternion_sensor_was_turned_off) for inv_quaternion_sensor_was_turned_off
+    mpu.o(i.handle_input) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
+    mpu.o(i.handle_input) refers to inv_mpu.o(i.mpu_get_sample_rate) for mpu_get_sample_rate
+    mpu.o(i.handle_input) refers to inv_mpu_dmp_motion_driver.o(i.dmp_enable_feature) for dmp_enable_feature
+    mpu.o(i.handle_input) refers to mpu.o(.bss) for hal
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_init) for mpu_init
+    mpu.o(i.mpu_init_all) refers to main.o(i.Error_Handler) for Error_Handler
+    mpu.o(i.mpu_init_all) refers to mpl.o(i.inv_init_mpl) for inv_init_mpl
+    mpu.o(i.mpu_init_all) refers to quaternion_supervisor.o(.text) for inv_enable_quaternion
+    mpu.o(i.mpu_init_all) refers to fusion_9axis.o(.text) for inv_enable_9x_sensor_fusion
+    mpu.o(i.mpu_init_all) refers to fast_no_motion.o(.text) for inv_enable_fast_nomot
+    mpu.o(i.mpu_init_all) refers to gyro_tc.o(.text) for inv_enable_gyro_tc
+    mpu.o(i.mpu_init_all) refers to compass_vec_cal.o(.text) for inv_enable_vector_compass_cal
+    mpu.o(i.mpu_init_all) refers to mag_disturb.o(.text) for inv_enable_magnetic_disturbance
+    mpu.o(i.mpu_init_all) refers to empl_outputs.o(i.inv_enable_eMPL_outputs) for inv_enable_eMPL_outputs
+    mpu.o(i.mpu_init_all) refers to mpl.o(i.inv_start_mpl) for inv_start_mpl
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_sensors) for mpu_set_sensors
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_configure_fifo) for mpu_configure_fifo
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_sample_rate) for mpu_set_sample_rate
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_compass_sample_rate) for mpu_set_compass_sample_rate
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_sample_rate) for mpu_get_sample_rate
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_gyro_fsr) for mpu_get_gyro_fsr
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_accel_fsr) for mpu_get_accel_fsr
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_get_compass_fsr) for mpu_get_compass_fsr
+    mpu.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_gyro_sample_rate) for inv_set_gyro_sample_rate
+    mpu.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_accel_sample_rate) for inv_set_accel_sample_rate
+    mpu.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_compass_sample_rate) for inv_set_compass_sample_rate
+    mpu.o(i.mpu_init_all) refers to ml_math_func.o(i.inv_orientation_matrix_to_scalar) for inv_orientation_matrix_to_scalar
+    mpu.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_gyro_orientation_and_scale) for inv_set_gyro_orientation_and_scale
+    mpu.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_accel_orientation_and_scale) for inv_set_accel_orientation_and_scale
+    mpu.o(i.mpu_init_all) refers to data_builder.o(i.inv_set_compass_orientation_and_scale) for inv_set_compass_orientation_and_scale
+    mpu.o(i.mpu_init_all) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    mpu.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_load_motion_driver_firmware) for dmp_load_motion_driver_firmware
+    mpu.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_orientation) for dmp_set_orientation
+    mpu.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_enable_feature) for dmp_enable_feature
+    mpu.o(i.mpu_init_all) refers to inv_mpu_dmp_motion_driver.o(i.dmp_set_fifo_rate) for dmp_set_fifo_rate
+    mpu.o(i.mpu_init_all) refers to inv_mpu.o(i.mpu_set_dmp_state) for mpu_set_dmp_state
+    mpu.o(i.mpu_init_all) refers to mpu.o(.data) for gyro_pdata
+    mpu.o(i.mpu_init_all) refers to mpu.o(.bss) for hal
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_quat) for inv_get_sensor_type_quat
+    mpu.o(i.read_from_mpl) refers to log_stm32.o(i.eMPL_send_quat) for eMPL_send_quat
+    mpu.o(i.read_from_mpl) refers to log_stm32.o(i.eMPL_send_data) for eMPL_send_data
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_accel) for inv_get_sensor_type_accel
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_gyro) for inv_get_sensor_type_gyro
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_compass) for inv_get_sensor_type_compass
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_euler) for inv_get_sensor_type_euler
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_rot_mat) for inv_get_sensor_type_rot_mat
+    mpu.o(i.read_from_mpl) refers to empl_outputs.o(i.inv_get_sensor_type_heading) for inv_get_sensor_type_heading
+    mpu.o(i.read_from_mpl) refers to hal_outputs.o(i.inv_get_sensor_type_linear_acceleration) for inv_get_sensor_type_linear_acceleration
+    mpu.o(i.read_from_mpl) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    mpu.o(i.read_from_mpl) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
+    mpu.o(i.read_from_mpl) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    mpu.o(i.read_from_mpl) refers to inv_mpu_dmp_motion_driver.o(i.dmp_get_pedometer_step_count) for dmp_get_pedometer_step_count
+    mpu.o(i.read_from_mpl) refers to inv_mpu_dmp_motion_driver.o(i.dmp_get_pedometer_walk_time) for dmp_get_pedometer_walk_time
+    mpu.o(i.read_from_mpl) refers to message_layer.o(i.inv_get_message_level_0) for inv_get_message_level_0
+    mpu.o(i.read_from_mpl) refers to mpu.o(.bss) for hal
+    mpu.o(i.run_self_test) refers to inv_mpu.o(i.mpu_run_self_test) for mpu_run_self_test
+    mpu.o(i.run_self_test) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
+    mpu.o(i.run_self_test) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    mpu.o(i.run_self_test) refers to inv_mpu.o(i.mpu_get_accel_sens) for mpu_get_accel_sens
+    mpu.o(i.run_self_test) refers to data_builder.o(i.inv_set_accel_bias) for inv_set_accel_bias
+    mpu.o(i.run_self_test) refers to inv_mpu.o(i.mpu_get_gyro_sens) for mpu_get_gyro_sens
+    mpu.o(i.run_self_test) refers to data_builder.o(i.inv_set_gyro_bias) for inv_set_gyro_bias
+    mpu.o(i.send_status_compass) refers to data_builder.o(i.inv_get_compass_set) for inv_get_compass_set
+    mpu.o(i.send_status_compass) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
+    mpu.o(i.send_status_compass) refers to log_stm32.o(i._MLPrintLog) for _MLPrintLog
+    mpu.o(i.setup_gyro) refers to inv_mpu.o(i.mpu_set_sensors) for mpu_set_sensors
+    mpu.o(i.setup_gyro) refers to inv_mpu.o(i.mpu_configure_fifo) for mpu_configure_fifo
+    mpu.o(i.setup_gyro) refers to inv_mpu.o(i.mpu_get_sample_rate) for mpu_get_sample_rate
+    mpu.o(i.setup_gyro) refers to data_builder.o(i.inv_set_accel_sample_rate) for inv_set_accel_sample_rate
+    mpu.o(i.setup_gyro) refers to mpu.o(.bss) for hal
+    mpu.o(.data) refers to mpu.o(.conststring) for .conststring
     led_f4discovery.o(i.LED_Initialize) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
     led_f4discovery.o(i.LED_Off) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
     led_f4discovery.o(i.LED_Off) refers to led_f4discovery.o(.constdata) for LED_PIN
@@ -868,6 +868,40 @@ Section Cross References
     stm32f4xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_CSSCallback) for HAL_RCC_CSSCallback
     stm32f4xx_hal_rcc.o(i.HAL_RCC_OscConfig) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
     stm32f4xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_LIN_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_LIN_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_UART_DMAStop) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f4xx_hal_uart.o(i.HAL_UART_DeInit) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit) for HAL_UART_MspDeInit
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_Receive_IT) for UART_Receive_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_Transmit_IT) for UART_Transmit_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT) for UART_EndTransmit_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
+    stm32f4xx_hal_uart.o(i.HAL_UART_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
+    stm32f4xx_hal_uart.o(i.HAL_UART_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive) refers to stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) for UART_WaitOnFlagUntilTimeout
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) for UART_DMAReceiveCplt
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) for UART_DMARxHalfCplt
+    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAError) for UART_DMAError
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit) refers to stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) for UART_WaitOnFlagUntilTimeout
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt) for UART_DMATransmitCplt
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt) for UART_DMATxHalfCplt
+    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAError) for UART_DMAError
+    stm32f4xx_hal_uart.o(i.UART_DMAError) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
+    stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxHalfCpltCallback) for HAL_UART_RxHalfCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxHalfCpltCallback) for HAL_UART_TxHalfCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_Receive_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
+    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) for HAL_RCC_GetPCLK2Freq
+    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
+    stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
     stm32f4xx_hal_msp.o(i.HAL_I2C_MspDeInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
     stm32f4xx_hal_msp.o(i.HAL_I2C_MspInit) refers to stm32f4xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
     stm32f4xx_hal_msp.o(i.HAL_MspInit) refers to stm32f4xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
@@ -906,40 +940,6 @@ Section Cross References
     startup_stm32f407xx.o(.text) refers to startup_stm32f407xx.o(STACK) for Stack_Mem
     system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.data) for SystemCoreClock
     system_stm32f4xx.o(i.SystemCoreClockUpdate) refers to system_stm32f4xx.o(.constdata) for AHBPrescTable
-    stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
-    stm32f4xx_hal_uart.o(i.HAL_HalfDuplex_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
-    stm32f4xx_hal_uart.o(i.HAL_LIN_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
-    stm32f4xx_hal_uart.o(i.HAL_LIN_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
-    stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
-    stm32f4xx_hal_uart.o(i.HAL_MultiProcessor_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
-    stm32f4xx_hal_uart.o(i.HAL_UART_DMAStop) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
-    stm32f4xx_hal_uart.o(i.HAL_UART_DeInit) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit) for HAL_UART_MspDeInit
-    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_Receive_IT) for UART_Receive_IT
-    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_Transmit_IT) for UART_Transmit_IT
-    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT) for UART_EndTransmit_IT
-    stm32f4xx_hal_uart.o(i.HAL_UART_IRQHandler) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
-    stm32f4xx_hal_uart.o(i.HAL_UART_Init) refers to stm32f4xx_hal_msp.o(i.HAL_UART_MspInit) for HAL_UART_MspInit
-    stm32f4xx_hal_uart.o(i.HAL_UART_Init) refers to stm32f4xx_hal_uart.o(i.UART_SetConfig) for UART_SetConfig
-    stm32f4xx_hal_uart.o(i.HAL_UART_Receive) refers to stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) for UART_WaitOnFlagUntilTimeout
-    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
-    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) for UART_DMAReceiveCplt
-    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) for UART_DMARxHalfCplt
-    stm32f4xx_hal_uart.o(i.HAL_UART_Receive_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAError) for UART_DMAError
-    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit) refers to stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) for UART_WaitOnFlagUntilTimeout
-    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
-    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt) for UART_DMATransmitCplt
-    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt) for UART_DMATxHalfCplt
-    stm32f4xx_hal_uart.o(i.HAL_UART_Transmit_DMA) refers to stm32f4xx_hal_uart.o(i.UART_DMAError) for UART_DMAError
-    stm32f4xx_hal_uart.o(i.UART_DMAError) refers to stm32f4xx_hal_uart.o(i.HAL_UART_ErrorCallback) for HAL_UART_ErrorCallback
-    stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
-    stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxHalfCpltCallback) for HAL_UART_RxHalfCpltCallback
-    stm32f4xx_hal_uart.o(i.UART_DMATransmitCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
-    stm32f4xx_hal_uart.o(i.UART_DMATxHalfCplt) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxHalfCpltCallback) for HAL_UART_TxHalfCpltCallback
-    stm32f4xx_hal_uart.o(i.UART_EndTransmit_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_TxCpltCallback) for HAL_UART_TxCpltCallback
-    stm32f4xx_hal_uart.o(i.UART_Receive_IT) refers to stm32f4xx_hal_uart.o(i.HAL_UART_RxCpltCallback) for HAL_UART_RxCpltCallback
-    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) for HAL_RCC_GetPCLK2Freq
-    stm32f4xx_hal_uart.o(i.UART_SetConfig) refers to stm32f4xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) for HAL_RCC_GetPCLK1Freq
-    stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout) refers to stm32f4xx_hal.o(i.HAL_GetTick) for HAL_GetTick
     compass_vec_cal.o(.text) refers to dflt_clz.o(x$fpl$dflt) for __aeabi_i2d
     compass_vec_cal.o(.text) refers to dcmp.o(x$fpl$fcmp) for __aeabi_dcmplt
     compass_vec_cal.o(.text) refers to dmul_clz.o(x$fpl$dmul) for __aeabi_dmul
@@ -1086,7 +1086,7 @@ Section Cross References
     quaternion_supervisor.o(.text) refers to fdiv.o(x$fpl$fdiv) for __aeabi_fdiv
     quaternion_supervisor.o(.text) refers to ffix.o(x$fpl$ffix) for __aeabi_f2iz
     quaternion_supervisor.o(.text) refers to memcmp.o(.text) for memcmp
-    quaternion_supervisor.o(.text) refers to mpu_1.o(.data) for mpl_key
+    quaternion_supervisor.o(.text) refers to mpu.o(.data) for mpl_key
     quaternion_supervisor.o(.text) refers to quaternion_supervisor.o(.rodata.str1.4) for [Anonymous Symbol]
     quaternion_supervisor.o(.text) refers to f2d.o(x$fpl$f2d) for __aeabi_f2d
     quaternion_supervisor.o(.text) refers to dmul_clz.o(x$fpl$dmul) for __aeabi_dmul
@@ -2401,18 +2401,18 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_it.o(.rev16_text), (4 bytes).
     Removing stm32f4xx_it.o(.revsh_text), (4 bytes).
     Removing stm32f4xx_it.o(.rrx_text), (6 bytes).
-    Removing mpu_1.o(.rev16_text), (4 bytes).
-    Removing mpu_1.o(.revsh_text), (4 bytes).
-    Removing mpu_1.o(.rrx_text), (6 bytes).
-    Removing mpu_1.o(i.Mpu_data_refresh), (576 bytes).
-    Removing mpu_1.o(i.handle_input), (1016 bytes).
-    Removing mpu_1.o(i.mpu_init_all), (328 bytes).
-    Removing mpu_1.o(i.read_from_mpl), (556 bytes).
-    Removing mpu_1.o(i.run_self_test), (572 bytes).
-    Removing mpu_1.o(i.send_status_compass), (212 bytes).
-    Removing mpu_1.o(i.setup_gyro), (116 bytes).
-    Removing mpu_1.o(.conststring), (9 bytes).
-    Removing mpu_1.o(.data), (36 bytes).
+    Removing mpu.o(.rev16_text), (4 bytes).
+    Removing mpu.o(.revsh_text), (4 bytes).
+    Removing mpu.o(.rrx_text), (6 bytes).
+    Removing mpu.o(i.Mpu_data_refresh), (576 bytes).
+    Removing mpu.o(i.handle_input), (1016 bytes).
+    Removing mpu.o(i.mpu_init_all), (328 bytes).
+    Removing mpu.o(i.read_from_mpl), (556 bytes).
+    Removing mpu.o(i.run_self_test), (572 bytes).
+    Removing mpu.o(i.send_status_compass), (212 bytes).
+    Removing mpu.o(i.setup_gyro), (116 bytes).
+    Removing mpu.o(.conststring), (9 bytes).
+    Removing mpu.o(.data), (36 bytes).
     Removing led_f4discovery.o(.rev16_text), (4 bytes).
     Removing led_f4discovery.o(.revsh_text), (4 bytes).
     Removing led_f4discovery.o(.rrx_text), (6 bytes).
@@ -2585,16 +2585,6 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_hal_rtc_ex.o(.rev16_text), (4 bytes).
     Removing stm32f4xx_hal_rtc_ex.o(.revsh_text), (4 bytes).
     Removing stm32f4xx_hal_rtc_ex.o(.rrx_text), (6 bytes).
-    Removing stm32f4xx_hal_msp.o(.rev16_text), (4 bytes).
-    Removing stm32f4xx_hal_msp.o(.revsh_text), (4 bytes).
-    Removing stm32f4xx_hal_msp.o(.rrx_text), (6 bytes).
-    Removing stm32f4xx_hal_msp.o(i.HAL_I2C_MspDeInit), (48 bytes).
-    Removing stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit), (68 bytes).
-    Removing system_stm32f4xx.o(.rev16_text), (4 bytes).
-    Removing system_stm32f4xx.o(.revsh_text), (4 bytes).
-    Removing system_stm32f4xx.o(.rrx_text), (6 bytes).
-    Removing system_stm32f4xx.o(i.SystemCoreClockUpdate), (192 bytes).
-    Removing system_stm32f4xx.o(.constdata), (16 bytes).
     Removing stm32f4xx_hal_uart.o(.rev16_text), (4 bytes).
     Removing stm32f4xx_hal_uart.o(.revsh_text), (4 bytes).
     Removing stm32f4xx_hal_uart.o(.rrx_text), (6 bytes).
@@ -2623,6 +2613,16 @@ Removing Unused input sections from the image.
     Removing stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt), (62 bytes).
     Removing stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt), (14 bytes).
     Removing stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout), (250 bytes).
+    Removing stm32f4xx_hal_msp.o(.rev16_text), (4 bytes).
+    Removing stm32f4xx_hal_msp.o(.revsh_text), (4 bytes).
+    Removing stm32f4xx_hal_msp.o(.rrx_text), (6 bytes).
+    Removing stm32f4xx_hal_msp.o(i.HAL_I2C_MspDeInit), (48 bytes).
+    Removing stm32f4xx_hal_msp.o(i.HAL_UART_MspDeInit), (68 bytes).
+    Removing system_stm32f4xx.o(.rev16_text), (4 bytes).
+    Removing system_stm32f4xx.o(.revsh_text), (4 bytes).
+    Removing system_stm32f4xx.o(.rrx_text), (6 bytes).
+    Removing system_stm32f4xx.o(i.SystemCoreClockUpdate), (192 bytes).
+    Removing system_stm32f4xx.o(.constdata), (16 bytes).
     Removing compass_vec_cal.o(.text), (8992 bytes).
     Removing compass_vec_cal.o(.data), (12 bytes).
     Removing compass_vec_cal.o(.bss), (0 bytes).
@@ -2662,143 +2662,143 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale_intlibspace.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_errno_addr.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_errno_addr_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale_intlibspace.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_locale.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_ctype_table.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_errno_addr_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_errno_addr.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/bigflt.c                         0x00000000   Number         0  bigflt0.o ABSOLUTE
     ../clib/btod.s                           0x00000000   Number         0  btod.o ABSOLUTE
-    ../clib/fenv.c                           0x00000000   Number         0  _rserrno.o ABSOLUTE
     ../clib/fenv.c                           0x00000000   Number         0  _fptrap.o ABSOLUTE
+    ../clib/fenv.c                           0x00000000   Number         0  _rserrno.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/locale.c                         0x00000000   Number         0  _wcrtomb.o ABSOLUTE
-    ../clib/locale.s                         0x00000000   Number         0  lc_numeric_c.o ABSOLUTE
     ../clib/locale.s                         0x00000000   Number         0  lc_ctype_c.o ABSOLUTE
-    ../clib/longlong.s                       0x00000000   Number         0  lludiv10.o ABSOLUTE
+    ../clib/locale.s                         0x00000000   Number         0  lc_numeric_c.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  llsdiv.o ABSOLUTE
+    ../clib/longlong.s                       0x00000000   Number         0  lludiv10.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  aeabi_memset.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  memcpy.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  strcmpv7m.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  memcpy.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memmove_v6.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  memmove.o ABSOLUTE
-    ../clib/memcpset.s                       0x00000000   Number         0  rt_memmove_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  strcmpv7m.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  aeabi_memset.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  memset.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memmove_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  memmove.o ABSOLUTE
     ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
     ../clib/misc.s                           0x00000000   Number         0  printf_stubs.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_longlong_dec.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_wctomb.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_charcount.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_pad.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  vsprintf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_truncate.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_dec.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_hex.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_wchar.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_infnan.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_truncate.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_wchar.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_hex.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_dec.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_pad.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_longlong_dec.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_fp_infnan.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_wctomb.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_oct_int.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_charcount.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  vsprintf.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_llx.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_u.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_i.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lld.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_o.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_p.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_x.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_s.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_n.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lld.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_c.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_llo.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_ls.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lc.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_l.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_ll.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_llu.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_p.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_lli.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_c.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_a.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_g.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_ls.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_e.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_f.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_u.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_llo.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_n.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  memcmp.o ABSOLUTE
@@ -2850,24 +2850,24 @@ Image Symbol Table
     ../fplib/usenofp.s                       0x00000000   Number         0  usenofp.o ABSOLUTE
     ../mathlib/acos.c                        0x00000000   Number         0  acos_x.o ABSOLUTE
     ../mathlib/acos.c                        0x00000000   Number         0  acos.o ABSOLUTE
-    ../mathlib/acosf.c                       0x00000000   Number         0  acosf.o ABSOLUTE
     ../mathlib/acosf.c                       0x00000000   Number         0  acosf_x.o ABSOLUTE
-    ../mathlib/asin.c                        0x00000000   Number         0  asin.o ABSOLUTE
+    ../mathlib/acosf.c                       0x00000000   Number         0  acosf.o ABSOLUTE
     ../mathlib/asin.c                        0x00000000   Number         0  asin_x.o ABSOLUTE
-    ../mathlib/asinf.c                       0x00000000   Number         0  asinf_x.o ABSOLUTE
+    ../mathlib/asin.c                        0x00000000   Number         0  asin.o ABSOLUTE
     ../mathlib/asinf.c                       0x00000000   Number         0  asinf.o ABSOLUTE
-    ../mathlib/atan.c                        0x00000000   Number         0  atan_x.o ABSOLUTE
+    ../mathlib/asinf.c                       0x00000000   Number         0  asinf_x.o ABSOLUTE
     ../mathlib/atan.c                        0x00000000   Number         0  atan.o ABSOLUTE
+    ../mathlib/atan.c                        0x00000000   Number         0  atan_x.o ABSOLUTE
     ../mathlib/atan2.c                       0x00000000   Number         0  atan2_x.o ABSOLUTE
     ../mathlib/atan2.c                       0x00000000   Number         0  atan2.o ABSOLUTE
-    ../mathlib/atan2f.c                      0x00000000   Number         0  atan2f_x.o ABSOLUTE
     ../mathlib/atan2f.c                      0x00000000   Number         0  atan2f.o ABSOLUTE
+    ../mathlib/atan2f.c                      0x00000000   Number         0  atan2f_x.o ABSOLUTE
     ../mathlib/ceil.c                        0x00000000   Number         0  ceil.o ABSOLUTE
-    ../mathlib/cos.c                         0x00000000   Number         0  cos_x.o ABSOLUTE
     ../mathlib/cos.c                         0x00000000   Number         0  cos.o ABSOLUTE
+    ../mathlib/cos.c                         0x00000000   Number         0  cos_x.o ABSOLUTE
     ../mathlib/cos_i.c                       0x00000000   Number         0  cos_i.o ABSOLUTE
-    ../mathlib/cosf.c                        0x00000000   Number         0  cosf.o ABSOLUTE
     ../mathlib/cosf.c                        0x00000000   Number         0  cosf_x.o ABSOLUTE
+    ../mathlib/cosf.c                        0x00000000   Number         0  cosf.o ABSOLUTE
     ../mathlib/dunder.c                      0x00000000   Number         0  dunder.o ABSOLUTE
     ../mathlib/fabs.c                        0x00000000   Number         0  fabs.o ABSOLUTE
     ../mathlib/floor.c                       0x00000000   Number         0  floor.o ABSOLUTE
@@ -2882,16 +2882,16 @@ Image Symbol Table
     ../mathlib/qnan.c                        0x00000000   Number         0  qnan.o ABSOLUTE
     ../mathlib/rred.c                        0x00000000   Number         0  rred.o ABSOLUTE
     ../mathlib/rredf.c                       0x00000000   Number         0  rredf.o ABSOLUTE
-    ../mathlib/sin.c                         0x00000000   Number         0  sin.o ABSOLUTE
     ../mathlib/sin.c                         0x00000000   Number         0  sin_x.o ABSOLUTE
+    ../mathlib/sin.c                         0x00000000   Number         0  sin.o ABSOLUTE
     ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i_x.o ABSOLUTE
     ../mathlib/sin_i.c                       0x00000000   Number         0  sin_i.o ABSOLUTE
-    ../mathlib/sinf.c                        0x00000000   Number         0  sinf_x.o ABSOLUTE
     ../mathlib/sinf.c                        0x00000000   Number         0  sinf.o ABSOLUTE
-    ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt_full.o ABSOLUTE
+    ../mathlib/sinf.c                        0x00000000   Number         0  sinf_x.o ABSOLUTE
     ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt_full_x.o ABSOLUTE
-    ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf_full.o ABSOLUTE
+    ../mathlib/sqrt.c                        0x00000000   Number         0  sqrt_full.o ABSOLUTE
     ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf_full_x.o ABSOLUTE
+    ../mathlib/sqrtf.c                       0x00000000   Number         0  sqrtf_full.o ABSOLUTE
     C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c 0x00000000   Number         0  stm32f4xx_hal.o ABSOLUTE
     C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c 0x00000000   Number         0  stm32f4xx_hal_cortex.o ABSOLUTE
     C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c 0x00000000   Number         0  stm32f4xx_hal_dma.o ABSOLUTE
@@ -2906,6 +2906,7 @@ Image Symbol Table
     C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rtc_ex.c 0x00000000   Number         0  stm32f4xx_hal_rtc_ex.o ABSOLUTE
     C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c 0x00000000   Number         0  stm32f4xx_hal_uart.o ABSOLUTE
     C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\MDK\Boards\ST\STM32F4-Discovery\Common\LED_F4Discovery.c 0x00000000   Number         0  led_f4discovery.o ABSOLUTE
+    C:\Users\Timer\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_hal_msp.c 0x00000000   Number         0  stm32f4xx_hal_msp.o ABSOLUTE
     C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.7.0\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal.c 0x00000000   Number         0  stm32f4xx_hal.o ABSOLUTE
     C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.7.0\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_cortex.c 0x00000000   Number         0  stm32f4xx_hal_cortex.o ABSOLUTE
     C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.7.0\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_dma.c 0x00000000   Number         0  stm32f4xx_hal_dma.o ABSOLUTE
@@ -2920,14 +2921,13 @@ Image Symbol Table
     C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.7.0\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_rtc_ex.c 0x00000000   Number         0  stm32f4xx_hal_rtc_ex.o ABSOLUTE
     C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.7.0\\Drivers\\STM32F4xx_HAL_Driver\\Src\\stm32f4xx_hal_uart.c 0x00000000   Number         0  stm32f4xx_hal_uart.o ABSOLUTE
     C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.7.0\\MDK\\Boards\\ST\\STM32F4-Discovery\\Common\\LED_F4Discovery.c 0x00000000   Number         0  led_f4discovery.o ABSOLUTE
-    D:\SYNC\design\keil\6_Keil\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_hal_msp.c 0x00000000   Number         0  stm32f4xx_hal_msp.o ABSOLUTE
-    D:\\SYNC\\design\\keil\\6_Keil\\RTE\\Device\\STM32F407VGTx\\STCubeGenerated\\Src\\stm32f4xx_hal_msp.c 0x00000000   Number         0  stm32f4xx_hal_msp.o ABSOLUTE
+    C:\\Users\\Timer\\Documents\\GitHub\\Quadcopter\\MDK\\RTE\\Device\\STM32F407VGTx\\STCubeGenerated\\Src\\stm32f4xx_hal_msp.c 0x00000000   Number         0  stm32f4xx_hal_msp.o ABSOLUTE
     RTE\Device\STM32F407VGTx\STCubeGenerated\Src\main.c 0x00000000   Number         0  main.o ABSOLUTE
     RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c 0x00000000   Number         0  stm32f4xx_it.o ABSOLUTE
     RTE\Device\STM32F407VGTx\startup_stm32f407xx.s 0x00000000   Number         0  startup_stm32f407xx.o ABSOLUTE
     RTE\Device\STM32F407VGTx\system_stm32f4xx.c 0x00000000   Number         0  system_stm32f4xx.o ABSOLUTE
     RTE\Device\eMPL\driver\STM32F4\log_stm32.c 0x00000000   Number         0  log_stm32.o ABSOLUTE
-    RTE\Device\eMPL\driver\STM32F4\mpu.c     0x00000000   Number         0  mpu_1.o ABSOLUTE
+    RTE\Device\eMPL\driver\STM32F4\mpu.c     0x00000000   Number         0  mpu.o ABSOLUTE
     RTE\Device\eMPL\driver\STM32F4\stm32f4xx_empl_drv.c 0x00000000   Number         0  stm32f4xx_empl_drv.o ABSOLUTE
     RTE\Device\eMPL\driver\eMPL\inv_mpu.c    0x00000000   Number         0  inv_mpu.o ABSOLUTE
     RTE\Device\eMPL\driver\eMPL\inv_mpu_dmp_motion_driver.c 0x00000000   Number         0  inv_mpu_dmp_motion_driver.o ABSOLUTE
@@ -2945,7 +2945,7 @@ Image Symbol Table
     RTE\\Device\\STM32F407VGTx\\STCubeGenerated\\Src\\stm32f4xx_it.c 0x00000000   Number         0  stm32f4xx_it.o ABSOLUTE
     RTE\\Device\\STM32F407VGTx\\system_stm32f4xx.c 0x00000000   Number         0  system_stm32f4xx.o ABSOLUTE
     RTE\\Device\\eMPL\\driver\\STM32F4\\log_stm32.c 0x00000000   Number         0  log_stm32.o ABSOLUTE
-    RTE\\Device\\eMPL\\driver\\STM32F4\\mpu.c 0x00000000   Number         0  mpu_1.o ABSOLUTE
+    RTE\\Device\\eMPL\\driver\\STM32F4\\mpu.c 0x00000000   Number         0  mpu.o ABSOLUTE
     RTE\\Device\\eMPL\\driver\\STM32F4\\stm32f4xx_empl_drv.c 0x00000000   Number         0  stm32f4xx_empl_drv.o ABSOLUTE
     RTE\\Device\\eMPL\\driver\\eMPL\\inv_mpu.c 0x00000000   Number         0  inv_mpu.o ABSOLUTE
     RTE\\Device\\eMPL\\driver\\eMPL\\inv_mpu_dmp_motion_driver.c 0x00000000   Number         0  inv_mpu_dmp_motion_driver.o ABSOLUTE
@@ -3112,7 +3112,7 @@ Image Symbol Table
     uwTick                                   0x20000018   Data           4  stm32f4xx_hal.o(.data)
     .data                                    0x2000001c   Section        4  system_stm32f4xx.o(.data)
     .bss                                     0x20000020   Section      300  main.o(.bss)
-    .bss                                     0x2000014c   Section       40  mpu_1.o(.bss)
+    .bss                                     0x2000014c   Section       40  mpu.o(.bss)
     .bss                                     0x20000174   Section       96  libspace.o(.bss)
     HEAP                                     0x200001d8   Section      512  startup_stm32f407xx.o(HEAP)
     Heap_Mem                                 0x200001d8   Data         512  startup_stm32f407xx.o(HEAP)
@@ -3369,7 +3369,7 @@ Image Symbol Table
     huart1                                   0x2000005c   Data          64  main.o(.bss)
     hdma_usart1_rx                           0x2000009c   Data          88  main.o(.bss)
     hdma_usart1_tx                           0x200000f4   Data          88  main.o(.bss)
-    hal                                      0x2000014c   Data          40  mpu_1.o(.bss)
+    hal                                      0x2000014c   Data          40  mpu.o(.bss)
     __libspace_start                         0x20000174   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x200001d4   Data           0  libspace.o(.bss)
 
@@ -3387,7 +3387,7 @@ Memory Map of the image
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x00000188   Data   RO         3736    RESET               startup_stm32f407xx.o
+    0x08000000   0x00000188   Data   RO         3978    RESET               startup_stm32f407xx.o
     0x08000188   0x00000008   Code   RO         4126  * !!!main             c_wu.l(__main.o)
     0x08000190   0x00000034   Code   RO         4838    !!!scatter          c_wu.l(__scatter.o)
     0x080001c4   0x0000001a   Code   RO         4840    !!handler_copy      c_wu.l(__scatter_copy.o)
@@ -3435,7 +3435,7 @@ Memory Map of the image
     0x0800021c   0x00000004   Code   RO         4763    .ARM.Collect$$rtexit$$00000003  c_wu.l(rtexit2.o)
     0x08000220   0x00000006   Code   RO         4764    .ARM.Collect$$rtexit$$00000004  c_wu.l(rtexit2.o)
     0x08000226   0x00000002   PAD
-    0x08000228   0x00000040   Code   RO         3737    .text               startup_stm32f407xx.o
+    0x08000228   0x00000040   Code   RO         3979    .text               startup_stm32f407xx.o
     0x08000268   0x00000006   Code   RO         4124    .text               c_wu.l(heapauxi.o)
     0x0800026e   0x00000002   PAD
     0x08000270   0x00000008   Code   RO         4643    .text               c_wu.l(libspace.o)
@@ -3463,11 +3463,11 @@ Memory Map of the image
     0x080008bc   0x0000000c   Code   RO         2936    i.HAL_GPIO_WritePin  stm32f4xx_hal_gpio.o
     0x080008c8   0x0000000c   Code   RO         2544    i.HAL_GetTick       stm32f4xx_hal.o
     0x080008d4   0x00000120   Code   RO         3001    i.HAL_I2C_Init      stm32f4xx_hal_i2c.o
-    0x080009f4   0x0000005c   Code   RO         3689    i.HAL_I2C_MspInit   stm32f4xx_hal_msp.o
+    0x080009f4   0x0000005c   Code   RO         3931    i.HAL_I2C_MspInit   stm32f4xx_hal_msp.o
     0x08000a50   0x00000010   Code   RO         2545    i.HAL_IncTick       stm32f4xx_hal.o
     0x08000a60   0x0000003c   Code   RO         2546    i.HAL_Init          stm32f4xx_hal.o
     0x08000a9c   0x00000024   Code   RO         2547    i.HAL_InitTick      stm32f4xx_hal.o
-    0x08000ac0   0x00000056   Code   RO         3690    i.HAL_MspInit       stm32f4xx_hal_msp.o
+    0x08000ac0   0x00000056   Code   RO         3932    i.HAL_MspInit       stm32f4xx_hal_msp.o
     0x08000b16   0x0000001a   Code   RO         2680    i.HAL_NVIC_EnableIRQ  stm32f4xx_hal_cortex.o
     0x08000b30   0x0000007c   Code   RO         2686    i.HAL_NVIC_SetPriority  stm32f4xx_hal_cortex.o
     0x08000bac   0x00000028   Code   RO         2687    i.HAL_NVIC_SetPriorityGrouping  stm32f4xx_hal_cortex.o
@@ -3481,16 +3481,16 @@ Memory Map of the image
     0x080013ec   0x0000000a   Code   RO         2690    i.HAL_SYSTICK_Callback  stm32f4xx_hal_cortex.o
     0x080013f6   0x00000034   Code   RO         2691    i.HAL_SYSTICK_Config  stm32f4xx_hal_cortex.o
     0x0800142a   0x00000008   Code   RO         2692    i.HAL_SYSTICK_IRQHandler  stm32f4xx_hal_cortex.o
-    0x08001432   0x00000002   Code   RO         3793    i.HAL_UART_ErrorCallback  stm32f4xx_hal_uart.o
-    0x08001434   0x00000130   Code   RO         3796    i.HAL_UART_IRQHandler  stm32f4xx_hal_uart.o
-    0x08001564   0x0000006e   Code   RO         3797    i.HAL_UART_Init     stm32f4xx_hal_uart.o
+    0x08001432   0x00000002   Code   RO         3700    i.HAL_UART_ErrorCallback  stm32f4xx_hal_uart.o
+    0x08001434   0x00000130   Code   RO         3703    i.HAL_UART_IRQHandler  stm32f4xx_hal_uart.o
+    0x08001564   0x0000006e   Code   RO         3704    i.HAL_UART_Init     stm32f4xx_hal_uart.o
     0x080015d2   0x00000002   PAD
-    0x080015d4   0x000000f0   Code   RO         3692    i.HAL_UART_MspInit  stm32f4xx_hal_msp.o
-    0x080016c4   0x00000002   Code   RO         3803    i.HAL_UART_RxCpltCallback  stm32f4xx_hal_uart.o
+    0x080015d4   0x000000f0   Code   RO         3934    i.HAL_UART_MspInit  stm32f4xx_hal_msp.o
+    0x080016c4   0x00000002   Code   RO         3710    i.HAL_UART_RxCpltCallback  stm32f4xx_hal_uart.o
     0x080016c6   0x00000002   PAD
-    0x080016c8   0x000000a8   Code   RO         3806    i.HAL_UART_Transmit_DMA  stm32f4xx_hal_uart.o
-    0x08001770   0x00000002   Code   RO         3808    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
-    0x08001772   0x00000002   Code   RO         3809    i.HAL_UART_TxHalfCpltCallback  stm32f4xx_hal_uart.o
+    0x080016c8   0x000000a8   Code   RO         3713    i.HAL_UART_Transmit_DMA  stm32f4xx_hal_uart.o
+    0x08001770   0x00000002   Code   RO         3715    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
+    0x08001772   0x00000002   Code   RO         3716    i.HAL_UART_TxHalfCpltCallback  stm32f4xx_hal_uart.o
     0x08001774   0x00000004   Code   RO         2305    i.HardFault_Handler  stm32f4xx_it.o
     0x08001778   0x0000004c   Code   RO         2472    i.LED_Initialize    led_f4discovery.o
     0x080017c4   0x00000020   Code   RO         2473    i.LED_Off           led_f4discovery.o
@@ -3509,15 +3509,15 @@ Memory Map of the image
     0x080019c2   0x00000002   Code   RO         2309    i.SVC_Handler       stm32f4xx_it.o
     0x080019c4   0x00000028   Code   RO         2310    i.SysTick_Handler   stm32f4xx_it.o
     0x080019ec   0x000000a8   Code   RO         2241    i.SystemClock_Config  main.o
-    0x08001a94   0x00000064   Code   RO         3745    i.SystemInit        system_stm32f4xx.o
-    0x08001af8   0x00000022   Code   RO         3810    i.UART_DMAError     stm32f4xx_hal_uart.o
-    0x08001b1a   0x00000036   Code   RO         3813    i.UART_DMATransmitCplt  stm32f4xx_hal_uart.o
-    0x08001b50   0x0000000e   Code   RO         3814    i.UART_DMATxHalfCplt  stm32f4xx_hal_uart.o
-    0x08001b5e   0x00000030   Code   RO         3815    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
-    0x08001b8e   0x000000bc   Code   RO         3816    i.UART_Receive_IT   stm32f4xx_hal_uart.o
+    0x08001a94   0x00000064   Code   RO         3987    i.SystemInit        system_stm32f4xx.o
+    0x08001af8   0x00000022   Code   RO         3717    i.UART_DMAError     stm32f4xx_hal_uart.o
+    0x08001b1a   0x00000036   Code   RO         3720    i.UART_DMATransmitCplt  stm32f4xx_hal_uart.o
+    0x08001b50   0x0000000e   Code   RO         3721    i.UART_DMATxHalfCplt  stm32f4xx_hal_uart.o
+    0x08001b5e   0x00000030   Code   RO         3722    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
+    0x08001b8e   0x000000bc   Code   RO         3723    i.UART_Receive_IT   stm32f4xx_hal_uart.o
     0x08001c4a   0x00000002   PAD
-    0x08001c4c   0x00000224   Code   RO         3817    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x08001e70   0x00000070   Code   RO         3818    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
+    0x08001c4c   0x00000224   Code   RO         3724    i.UART_SetConfig    stm32f4xx_hal_uart.o
+    0x08001e70   0x00000070   Code   RO         3725    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
     0x08001ee0   0x00000010   Code   RO         2311    i.USART1_IRQHandler  stm32f4xx_it.o
     0x08001ef0   0x00000004   Code   RO         2312    i.UsageFault_Handler  stm32f4xx_it.o
     0x08001ef4   0x00000060   Code   RO         2242    i.main              main.o
@@ -3537,13 +3537,13 @@ Memory Map of the image
     0x20000014   0x00000002   Data   RW         2313    .data               stm32f4xx_it.o
     0x20000016   0x00000002   PAD
     0x20000018   0x00000004   Data   RW         2552    .data               stm32f4xx_hal.o
-    0x2000001c   0x00000004   Data   RW         3747    .data               system_stm32f4xx.o
+    0x2000001c   0x00000004   Data   RW         3989    .data               system_stm32f4xx.o
     0x20000020   0x0000012c   Zero   RW         2243    .bss                main.o
-    0x2000014c   0x00000028   Zero   RW         2410    .bss                mpu_1.o
+    0x2000014c   0x00000028   Zero   RW         2410    .bss                mpu.o
     0x20000174   0x00000060   Zero   RW         4644    .bss                c_wu.l(libspace.o)
     0x200001d4   0x00000004   PAD
-    0x200001d8   0x00000200   Zero   RW         3735    HEAP                startup_stm32f407xx.o
-    0x200003d8   0x00000400   Zero   RW         3734    STACK               startup_stm32f407xx.o
+    0x200001d8   0x00000200   Zero   RW         3977    HEAP                startup_stm32f407xx.o
+    0x200003d8   0x00000400   Zero   RW         3976    STACK               startup_stm32f407xx.o
 
 
 ==============================================================================
@@ -3555,22 +3555,22 @@ Image component sizes
 
          0          0          0          0          0     350428   inv_mpu.o
        180         16         32          0          0       3589   led_f4discovery.o
-       608         62          0         20        300       4955   main.o
-         0          0          0          0         40       2658   mpu_1.o
-        64         26        392          0       1536        844   startup_stm32f407xx.o
+       608         62          0         20        300       5155   main.o
+         0          0          0          0         40       2718   mpu.o
+        64         26        392          0       1536        864   startup_stm32f407xx.o
        124         16          0          4          0       3814   stm32f4xx_hal.o
        356         22          0          0          0      33533   stm32f4xx_hal_cortex.o
        870         16          8          0          0       4695   stm32f4xx_hal_dma.o
        574         52          0          0          0       3892   stm32f4xx_hal_gpio.o
        288         10          0          0          0       1475   stm32f4xx_hal_i2c.o
-       418         38          0          0          0       2751   stm32f4xx_hal_msp.o
+       418         38          0          0          0       2911   stm32f4xx_hal_msp.o
       2032         68         16          0          0       6275   stm32f4xx_hal_rcc.o
       1588         22          0          0          0      10677   stm32f4xx_hal_uart.o
-       132         26          0          2          0       7096   stm32f4xx_it.o
-       100         18          0          4          0       1177   system_stm32f4xx.o
+       132         26          0          2          0       7376   stm32f4xx_it.o
+       100         18          0          4          0       1237   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      7346        392        480         32       1876     437859   Object Totals
+      7346        392        480         32       1876     438639   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         12          0          0          2          0          0   (incl. Padding)
 
@@ -3621,8 +3621,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      7640        408        480         32       1976     431803   Grand Totals
-      7640        408        480         32       1976     431803   ELF Image Totals
+      7640        408        480         32       1976     432583   Grand Totals
+      7640        408        480         32       1976     432583   ELF Image Totals
       7640        408        480         32          0          0   ROM Totals
 
 ==============================================================================

@@ -16,7 +16,7 @@
 ".\RTE\Device\eMPL\mpl\libmpllib.a"
 ".\objects\main.o"
 ".\objects\stm32f4xx_it.o"
-".\objects\mpu_1.o"
+".\objects\mpu.o"
 ".\objects\led_f4discovery.o"
 ".\objects\stm32f4xx_hal.o"
 ".\objects\stm32f4xx_hal_cortex.o"
@@ -30,10 +30,10 @@
 ".\objects\stm32f4xx_hal_rcc_ex.o"
 ".\objects\stm32f4xx_hal_rtc.o"
 ".\objects\stm32f4xx_hal_rtc_ex.o"
+".\objects\stm32f4xx_hal_uart.o"
 ".\objects\stm32f4xx_hal_msp.o"
 ".\objects\startup_stm32f407xx.o"
 ".\objects\system_stm32f4xx.o"
-".\objects\stm32f4xx_hal_uart.o"
 --strict --scatter ".\Objects\Quadcopter.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

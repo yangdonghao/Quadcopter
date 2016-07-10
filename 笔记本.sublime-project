@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\Timer\\Documents\\GitHub",
+			"file_include_patterns": ["*.c","*.h","*.sublime-project",".gitignore"]
+		}
+	]
+}

@@ -882,15 +882,16 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\objects\startup_stm32f407xx.d -o.\objects\startup_stm32f407xx
-.o -I.\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc -ID:\SYNC\design\keil\6_Kei
-l\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK
-\Keil\MDK-Middleware\7.0.0\Board -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0
-\Drivers\CMSIS\Device\ST\STM32F4xx\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx
-_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Inc -ID:\SYNC\design\keil\6_Keil\RTE\De
-vice\STM32F407VGTx -ID:\SYNC\design\keil\6_Keil\RTE\Device\STM32F407VGTx\STCube
-Generated\Inc -ISTCubeGenerated\Inc --predefine="__UVISION_VERSION SETA 517" --
-predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=.\listings\sta
-rtup_stm32f407xx.lst RTE\Device\STM32F407VGTx\startup_stm32f407xx.s
+.o -I.\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc -IC:\Users\Timer\Documents\
+GitHub\Quadcopter\MDK\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -
+IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.0.0\Board -IC:\Keil_v5\ARM\PACK\Keil
+\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include -IC:\Keil_v5\ARM
+\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\STM32F4xx_HAL_Driver\Inc -IC:\Users\Time
+r\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx -IC:\Users\Timer\Doc
+uments\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc -ISTC
+ubeGenerated\Inc --predefine="__UVISION_VERSION SETA 517" --predefine="_RTE_ SE
+TA 1" --predefine="STM32F407xx SETA 1" --list=.\listings\startup_stm32f407xx.ls
+t RTE\Device\STM32F407VGTx\startup_stm32f407xx.s
 
 
 
