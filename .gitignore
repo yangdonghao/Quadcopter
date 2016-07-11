@@ -1,2 +1,4 @@
-MDK/Objects
-
+MDK/Objects/
+*.o
+*.d
+*.crf

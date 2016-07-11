@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "."
+			"path": ".",
+			"file_include_patterns": ["*.c","*.h","*.sublime-project","*.gitignore","*.md"]
 		},
 		{
 			"path": "C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.9.0\\MDK\\Boards\\ST\\STM32F4-Discovery"
