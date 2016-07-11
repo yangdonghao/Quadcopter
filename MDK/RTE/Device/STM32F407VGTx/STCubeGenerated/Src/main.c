@@ -49,7 +49,7 @@ DMA_HandleTypeDef hdma_usart2_tx;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-uint8_t aTxBuffer[] = "cxvxcvxcvxcv";
+uint8_t TxBuffer[];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,8 +94,9 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
 	LED_Initialize();
-	//mpu_init_all();
-	
+  LED_On(2);
+	mpu_init_all();
+	LED_On(3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -107,10 +108,9 @@ int main(void)
    if	( (Timebase_500ms_even_flag & 0x01) == 0 )
    {
     
-    LED_SetOut(LED_Count++);
-		//HAL_UART_Transmit_DMA(&huart2,aTxBuffer, 10);
-		HAL_UART_Transmit(&huart1,aTxBuffer,10,10000);
-		HAL_UART_Transmit(&huart2,aTxBuffer,10,10000);
+    //LED_SetOut(LED_Count++);
+		HAL_UART_Transmit_DMA(&huart2,TxBuffer, 10);
+		
     Timebase_500ms_even_flag |= 0x01;
    }
 
@@ -295,6 +295,16 @@ void Error_Handler(void)
   /* User can add his own implementation to report the HAL error return state */
   while(1) 
   {
+    LED_On(0);
+    LED_On(1);
+    LED_On(2);
+    LED_On(3);
+    HAL_Delay(1000);
+    LED_Off(0);
+    LED_Off(1);
+    LED_Off(2);
+    LED_Off(3);
+    HAL_Delay(1000);
   }
   /* USER CODE END Error_Handler */ 
 }
