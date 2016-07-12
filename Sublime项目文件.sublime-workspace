@@ -15,7 +15,23 @@
 			"file": "MDK/RTE/Device/STM32F407VGTx/STCubeGenerated/Src/main.c",
 			"settings":
 			{
-				"buffer_size": 9471,
+				"buffer_size": 8530,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "MDK/RTE/Device/STM32F407VGTx/STCubeGenerated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+			"settings":
+			{
+				"buffer_size": 65373,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 456,
 				"line_ending": "Windows"
 			}
 		}
@@ -27,7 +43,7 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 35.0,
 		"last_filter": "git ",
 		"selected_items":
 		[
@@ -104,7 +120,7 @@
 				"LaTeXing: Word to Phrases Dictionary"
 			]
 		],
-		"width": 464.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -124,6 +140,18 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/Users/Timer/Documents/GitHub/Quadcopter",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/Listings",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/Objects",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/RTE",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/RTE/Device",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/RTE/Device/STM32F407VGTx",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/RTE/Device/STM32F407VGTx/STCubeGenerated",
+		"/C/Users/Timer/Documents/GitHub/Quadcopter/MDK/RTE/Device/STM32F407VGTx/STCubeGenerated/Src"
+	],
 	"file_history":
 	[
 		"/C/Users/Timer/Documents/GitHub/Quadcopter/Sublime项目文件.sublime-project",
@@ -257,7 +285,7 @@
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -401,7 +429,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -410,15 +438,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9471,
+						"buffer_size": 8530,
 						"regions":
 						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										3576,
+										3576
+									]
+								],
+								"scope": "bookmarks"
+							}
 						},
 						"selection":
 						[
 							[
-								3974,
-								3974
+								3731,
+								3752
 							]
 						],
 						"settings":
@@ -430,8 +471,8 @@
 								{
 									"1":
 									[
-										3981,
-										3982
+										3824,
+										3825
 									]
 								},
 								"icon":
@@ -446,8 +487,8 @@
 								{
 									"1":
 									[
-										3830,
-										3831
+										3671,
+										3672
 									]
 								},
 								"unmatched":
@@ -456,6 +497,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -466,11 +512,16 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -481,40 +532,29 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"bs_sintax": "c improved",
 							"buffer_scroll_name": "3d1b2168",
-							"is_init_dirty_state": false,
 							"origin_encoding": "ASCII",
 							"spell_check": false,
 							"syntax": "Packages/C Improved/C Improved.tmLanguage",
@@ -522,7 +562,224 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2678.0,
+						"translation.y": 2597.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "MDK/RTE/Device/STM32F407VGTx/STCubeGenerated/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 65373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39123,
+								39123
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+									"1":
+									[
+										39123,
+										39124
+									]
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bs_sintax": "c improved",
+							"buffer_scroll_name": "d9008d2a",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C Improved/C Improved.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 32755.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								451,
+								451
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"bs_sintax": "markdown",
+							"buffer_scroll_name": "8b0a17ed",
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 465.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -533,7 +790,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -562,19 +819,15 @@
 		]
 	},
 	"menu_visible": true,
-	"output.astyle_error_message":
-	{
-		"height": 0.0
-	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
-	"project": "笔记本.sublime-project",
+	"project": "Sublime项目文件.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 66.0
 	},
 	"save_all_on_build": true,
 	"select_file":
