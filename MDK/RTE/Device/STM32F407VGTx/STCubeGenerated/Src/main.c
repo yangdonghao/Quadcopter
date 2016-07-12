@@ -47,7 +47,7 @@ DMA_HandleTypeDef hdma_usart2_tx;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 uint8_t TxBuffer[32];
-uint8_t RxBUffer[32];
+uint8_t RxBuffer[32];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -93,6 +93,9 @@ int main(void)
   LED_On(2);
   //mpu_init_all();
   LED_On(3);
+
+  HAL_UART_Transmit_DMA(&huart2, TxBuffer, 10);
+  HAL_UART_Receive_DMA(&huart2, RxBuffer, 10);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,7 +108,6 @@ int main(void)
     {
       TxBuffer[1]++;
       LED_SetOut(LED_Count++);
-      //HAL_UART_Transmit_DMA(&huart2, TxBuffer, 10);
 
       Timebase_500ms_even_flag |= 0x01;
     }
