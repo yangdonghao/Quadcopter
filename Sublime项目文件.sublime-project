@@ -8,5 +8,30 @@
 		{
 			"path": "C:\\Keil_v5\\ARM\\PACK\\Keil\\STM32F4xx_DFP\\2.9.0\\MDK\\Boards\\ST\\STM32F4-Discovery"
 		}
-	]
+	],
+	    // project folders, etc
+    // ...
+    // project settings
+    "settings":
+    {
+        "AStyleFormatter":
+        {
+            "options_default":
+            {
+                // Use 2 spaces for indentation
+                "indent": "spaces",
+                "indent-spaces": 2
+            },
+            "options_c":
+            {
+                "use_only_additional_options": true,
+                "additional_options_file": "/path/to/your/astylerc/for/c"
+            },
+            "options_c++":
+            {
+                "use_only_additional_options": true,
+                "additional_options_file": "/path/to/your/astylerc/for/c++"
+            }
+        }
+    }
 }

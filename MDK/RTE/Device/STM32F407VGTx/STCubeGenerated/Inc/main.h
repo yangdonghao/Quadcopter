@@ -6,6 +6,7 @@
 #include "Board_LED.h"
 extern I2C_HandleTypeDef hi2c1;
 extern uint16_t Timebase_500ms_even_flag;
+extern uint16_t Timebase_300ms_even_flag;
 
 #endif /* __MAIN_H */
 

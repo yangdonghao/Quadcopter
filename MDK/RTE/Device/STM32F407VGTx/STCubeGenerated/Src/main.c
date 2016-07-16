@@ -48,6 +48,7 @@ DMA_HandleTypeDef hdma_usart2_tx;
 /* Private variables ---------------------------------------------------------*/
 uint8_t TxBuffer[32];
 uint8_t RxBuffer[32];
+uint8_t Tx_Rx_Mode_Flag;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,7 +72,8 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  static uint32_t LED_Count = 0;
+  static uint32_t LED_Count  = 0;
+  static uint32_t Count_temp = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -93,23 +95,39 @@ int main(void)
   LED_On(2);
   //mpu_init_all();
   LED_On(3);
-
-  HAL_UART_Transmit_DMA(&huart2, TxBuffer, 10);
-  HAL_UART_Receive_DMA(&huart2, RxBuffer, 10);
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
-
-    //Mpu_data_refresh();
+  { 
+    //时基为500ms的程序   
     if ( (Timebase_500ms_even_flag & 0x01) == 0 )
     {
-      TxBuffer[1]++;
-      LED_SetOut(LED_Count++);
+      //Mpu_data_refresh();
+      //LED_SetOut(LED_Count++);
 
       Timebase_500ms_even_flag |= 0x01;
+    }
+
+    //时基为300ms的程序   
+    if ( (Timebase_300ms_even_flag & 0x01) == 0 )
+    {
+      LED_SetOut(LED_Count++);
+      
+      if(Tx_Rx_Mode_Flag == 0)
+      {
+        HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
+        Tx_Rx_Mode_Flag = 1;
+      }
+      else
+      { 
+        HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
+        Tx_Rx_Mode_Flag = 0;
+      } 
+      
+      Timebase_300ms_even_flag |= 0x01;
     }
 
 
@@ -140,7 +158,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 84;
+  RCC_OscInitStruct.PLL.PLLN = 50;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
@@ -153,8 +171,8 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV4;
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }

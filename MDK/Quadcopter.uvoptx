@@ -211,7 +211,23 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>218</LineNumber>
+          <LineNumber>118</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134225884</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/main.c\118</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>225</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>134218474</Address>
           <ByteObject>0</ByteObject>
@@ -222,12 +238,12 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\218</Expression>
+          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\225</Expression>
         </Bp>
         <Bp>
-          <Number>1</Number>
+          <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>232</LineNumber>
+          <LineNumber>239</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>134218490</Address>
           <ByteObject>0</ByteObject>
@@ -238,23 +254,23 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\232</Expression>
+          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\239</Expression>
         </Bp>
         <Bp>
-          <Number>2</Number>
+          <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>246</LineNumber>
+          <LineNumber>119</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134226390</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\246</Expression>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

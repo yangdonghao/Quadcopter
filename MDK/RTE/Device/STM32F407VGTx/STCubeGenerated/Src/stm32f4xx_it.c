@@ -39,13 +39,14 @@
 #include "mpu.h"
 
 uint16_t Timebase_500ms_even_flag;
-
+uint16_t Timebase_300ms_even_flag;
 
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_usart2_rx;
 extern DMA_HandleTypeDef hdma_usart2_tx;
+extern UART_HandleTypeDef huart2;
 
 /******************************************************************************/
 /*            Cortex-M4 Processor Interruption and Exception Handlers         */ 
@@ -173,11 +174,19 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-
+   //配置理解：HAL_SYSTICK_Config--设置多少次时钟源产生�?次嘀嗒中�?
+   //          输入参数�?--HAL_RCC_GetHCLKFreq()/1000
+   //          HAL_SYSTICK_CLKSourceConfig--设置时钟�?
+   //          假设 HCLK �? 100 Mhz，当100M/1000=100K 次时钟源跳动产生�?次中�?
+   //          该设置保�? �?嗒中�? 始终�? 1 ms
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
+  if ( HAL_GetTick()%300==0 )
+  {
+    Timebase_300ms_even_flag = 0;
+  }
   if ( HAL_GetTick()%500==0 )
   {
     Timebase_500ms_even_flag = 0;
@@ -232,6 +241,20 @@ void DMA1_Stream6_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Stream6_IRQn 1 */
 
   /* USER CODE END DMA1_Stream6_IRQn 1 */
+}
+
+/**
+* @brief This function handles USART2 global interrupt.
+*/
+void USART2_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART2_IRQn 0 */
+
+  /* USER CODE END USART2_IRQn 0 */
+  HAL_UART_IRQHandler(&huart2);
+  /* USER CODE BEGIN USART2_IRQn 1 */
+
+  /* USER CODE END USART2_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */
