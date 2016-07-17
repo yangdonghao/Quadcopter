@@ -48,6 +48,8 @@ DMA_HandleTypeDef hdma_usart2_tx;
 /* Private variables ---------------------------------------------------------*/
 uint8_t TxBuffer[32];
 uint8_t RxBuffer[32];
+uint8_t TxBuffer1[32];
+uint8_t RxBuffer1[32];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,7 +74,6 @@ int main(void)
 
     /* USER CODE BEGIN 1 */
     static uint32_t LED_Count  = 0;
-    static uint32_t Count_temp = 0;
     /* USER CODE END 1 */
 
     /* MCU Configuration----------------------------------------------------------*/
@@ -94,15 +95,16 @@ int main(void)
     LED_On(2);
     //mpu_init_all();
     LED_On(3);
+
+    //HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
     HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
-    HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1)
     {
-        //时基为500ms的程序
+        //时基�?500ms的程�?
         if ( (Timebase_500ms_even_flag & 0x01) == 0 )
         {
             //Mpu_data_refresh();
@@ -111,27 +113,26 @@ int main(void)
             Timebase_500ms_even_flag |= 0x01;
         }
 
-        //时基为300ms的程序
+        //时基�?300ms的程�?
         if ( (Timebase_300ms_even_flag & 0x01) == 0 )
         {
             LED_SetOut(LED_Count++);
-            switch (Tx_Rx_Mode_Flag)
-            {
-            case 1:
-                HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
-                Tx_Rx_Mode_Flag = 2;
-                break;
-            case 2:
-                //HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
-                Tx_Rx_Mode_Flag = 3;
-                break;
-            default:
-                break;
-            }
-
-
             Timebase_300ms_even_flag |= 0x01;
+
         }
+
+        if( (Tx_Rx_Mode_Flag == 1) && HAL_GPIO_ReadPin(GPIOA,4) )
+        {
+            memcpy(TxBuffer,RxBuffer,32);
+            //TxBuffer[2]++;
+            HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
+            HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
+            Tx_Rx_Mode_Flag = 0;
+        }
+
+
+
+
 
 
         /* USER CODE END WHILE */
@@ -260,6 +261,12 @@ static void MX_GPIO_Init(void)
     /* GPIO Ports Clock Enable */
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
+
+    /*Configure GPIO pin : PA4 */
+    GPIO_InitStruct.Pin = GPIO_PIN_4;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
     /*Configure GPIO pin : PB4 */
     GPIO_InitStruct.Pin = GPIO_PIN_4;
