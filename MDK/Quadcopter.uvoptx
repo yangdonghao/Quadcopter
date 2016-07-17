@@ -211,55 +211,87 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>118</LineNumber>
+          <LineNumber>1232</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134225884</Address>
+          <Address>134281296</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\main.c</Filename>
+          <Filename>.\RTE\Device\eMPL\driver\eMPL\inv_mpu.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/main.c\118</Expression>
+          <Expression>\\Quadcopter\RTE/Device/eMPL/driver/eMPL/inv_mpu.c\1232</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>225</LineNumber>
+          <LineNumber>105</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218474</Address>
+          <Address>134282320</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
+          <Filename>.\RTE\Device\eMPL\driver\STM32F4\mpu.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\225</Expression>
+          <Expression>\\Quadcopter\RTE/Device/eMPL/driver/STM32F4/mpu.c\105</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>239</LineNumber>
+          <LineNumber>103</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218490</Address>
+          <Address>134273074</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
+          <Filename>.\RTE\Device\eMPL\eMPL-hal\eMPL_outputs.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\239</Expression>
+          <Expression>\\Quadcopter\RTE/Device/eMPL/eMPL-hal/eMPL_outputs.c\103</Expression>
         </Bp>
         <Bp>
           <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>119</LineNumber>
+          <LineNumber>704</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134258126</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\RTE\Device\eMPL\driver\STM32F4\mpu.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Quadcopter\RTE/Device/eMPL/driver/STM32F4/mpu.c\704</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>671</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134257974</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\RTE\Device\eMPL\driver\STM32F4\mpu.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Quadcopter\RTE/Device/eMPL/driver/STM32F4/mpu.c\671</Expression>
+        </Bp>
+        <Bp>
+          <Number>5</Number>
+          <Type>0</Type>
+          <LineNumber>670</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
           <ByteObject>0</ByteObject>
@@ -268,7 +300,23 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
-          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\main.c</Filename>
+          <Filename>.\RTE\Device\eMPL\driver\STM32F4\mpu.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>6</Number>
+          <Type>0</Type>
+          <LineNumber>760</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>.\RTE\Device\eMPL\driver\eMPL\inv_mpu.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
@@ -279,12 +327,27 @@
           <WinNumber>1</WinNumber>
           <ItemText>RxBuffer</ItemText>
         </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>compass</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>accel</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>
           <count>0</count>
           <WinNumber>2</WinNumber>
           <ItemText>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/main.c\TxBuffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>eMPL_out.quat</ItemText>
         </Ww>
       </WatchWindow2>
       <Tracepoint>
@@ -296,7 +359,7 @@
         <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
-        <aSer2>0</aSer2>
+        <aSer2>1</aSer2>
         <aPa>0</aPa>
         <viewmode>1</viewmode>
         <vrSel>0</vrSel>

@@ -774,7 +774,7 @@ void Mpu_data_refresh(void)
       new_data = 1;
     }
     
-    if (new_data)
+    if (new_data)//如果有任何数据更新
     {
       inv_execute_on_data();
       /* This function reads bias-compensated sensor data and sensor
@@ -782,7 +782,7 @@ void Mpu_data_refresh(void)
        * in eMPL_outputs.c. This function only needs to be called at the
        * rate requested by the host.
        */
-      if (timestamp > hal.next_data_tx_ms)
+      if (timestamp > hal.next_data_tx_ms)//时基更新
       {
         hal.next_data_tx_ms += DATA_TX_MS;
         read_from_mpl();

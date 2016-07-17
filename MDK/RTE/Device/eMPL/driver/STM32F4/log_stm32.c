@@ -27,6 +27,7 @@
 #include "packet.h"
 #include "log.h"
 #include "stm32f4xx_hal.h"
+#include "main.h"
 
 //#include "usb_device.h"
 //#include "usbd_cdc.h"
@@ -110,12 +111,12 @@ int _MLPrintLog (int priority, const char* tag, const char* fmt, ...)
 
 void eMPL_send_quat(long *quat)
 {
-	char out[18];
+	//	char out[18];
 	
 	if (!quat)
 		return;
 	
-	memset(out, 0, 18);
+	/*memset(out, 0, 18);
 	out[0] = '$';
 	out[1] = PACKET_QUAT;
 	out[2] = (char)(quat[0] >> 24);
@@ -133,7 +134,23 @@ void eMPL_send_quat(long *quat)
 	out[14] = (char)(quat[3] >> 24);
 	out[15] = (char)(quat[3] >> 16);
 	out[16] = (char)(quat[3] >> 8);
-	out[17] = (char)quat[3];
+	out[17] = (char)quat[3];*/
+	TxBuffer[1]  = (char)(quat[0] >> 24);
+	TxBuffer[2]  = (char)(quat[0] >> 16);
+	TxBuffer[3]  = (char)(quat[0] >> 8);
+	TxBuffer[4]  = (char)quat[0];
+	TxBuffer[5]  = (char)(quat[1] >> 24);
+	TxBuffer[6]  = (char)(quat[1] >> 16);
+	TxBuffer[7]  = (char)(quat[1] >> 8);
+	TxBuffer[8]  = (char)quat[1];
+	TxBuffer[9]  = (char)(quat[2] >> 24);
+	TxBuffer[10] = (char)(quat[2] >> 16);
+	TxBuffer[11] = (char)(quat[2] >> 8);
+	TxBuffer[12] = (char)quat[2];
+	TxBuffer[13] = (char)(quat[3] >> 24);
+	TxBuffer[14] = (char)(quat[3] >> 16);
+	TxBuffer[15] = (char)(quat[3] >> 8);
+	TxBuffer[16] = (char)quat[3];
 	
 	//USBD_CDC_SetTxBuffer (&hUsbDeviceFS, (uint8_t *)out, 18);
 	//USBD_CDC_TransmitPacket (&hUsbDeviceFS);

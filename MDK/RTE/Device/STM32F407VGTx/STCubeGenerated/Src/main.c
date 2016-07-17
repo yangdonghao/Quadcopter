@@ -73,7 +73,6 @@ int main(void)
 
   /* USER CODE BEGIN 1 */
   static uint32_t LED_Count  = 0;
-  static uint32_t Count_temp = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -93,7 +92,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LED_Initialize();
   LED_On(2);
-  //mpu_init_all();
+  mpu_init_all();
   LED_On(3);
   
   /* USER CODE END 2 */
@@ -105,7 +104,7 @@ int main(void)
     //时基为500ms的程序   
     if ( (Timebase_500ms_even_flag & 0x01) == 0 )
     {
-      //Mpu_data_refresh();
+      Mpu_data_refresh();
       //LED_SetOut(LED_Count++);
 
       Timebase_500ms_even_flag |= 0x01;
@@ -118,6 +117,9 @@ int main(void)
       
       if(Tx_Rx_Mode_Flag == 0)
       {
+       //串口数据
+       //0：
+       //1~16：log_stm32.c -> L119 -> quat
         HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
         Tx_Rx_Mode_Flag = 1;
       }
