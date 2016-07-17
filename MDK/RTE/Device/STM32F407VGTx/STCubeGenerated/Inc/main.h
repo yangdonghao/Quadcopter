@@ -7,6 +7,7 @@
 extern I2C_HandleTypeDef hi2c1;
 extern uint16_t Timebase_500ms_even_flag;
 extern uint16_t Timebase_300ms_even_flag;
+extern uint8_t Tx_Rx_Mode_Flag;
 
 #endif /* __MAIN_H */
 
