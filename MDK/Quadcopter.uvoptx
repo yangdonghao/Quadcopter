@@ -157,7 +157,7 @@
         <tRSysVw>1</tRSysVw>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
-        <nTsel>11</nTsel>
+        <nTsel>5</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -211,34 +211,50 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>241</LineNumber>
+          <LineNumber>227</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218498</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
+          <BreakIfRCount>0</BreakIfRCount>
           <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\241</Expression>
+          <Expression></Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>227</LineNumber>
+          <LineNumber>760</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218480</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\RTE\Device\STM32F407VGTx\STCubeGenerated\Src\stm32f4xx_it.c</Filename>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>.\RTE\Device\eMPL\driver\eMPL\inv_mpu.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Quadcopter\RTE/Device/STM32F407VGTx/STCubeGenerated/Src/stm32f4xx_it.c\227</Expression>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>103</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>0</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>.\RTE\Device\eMPL\eMPL-hal\eMPL_outputs.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

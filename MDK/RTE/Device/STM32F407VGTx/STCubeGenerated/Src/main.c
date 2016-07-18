@@ -118,17 +118,19 @@ int main(void)
         {
             LED_SetOut(LED_Count++);
             Timebase_300ms_even_flag |= 0x01;
-
+            //HAL_UART_Transmit_DMA(&huart2, RxBuffer, 32);
+            if( (Tx_Rx_Mode_Flag == 1) && HAL_GPIO_ReadPin(GPIOA,4) )
+            {
+                //memcpy(TxBuffer,RxBuffer,32);
+                //TxBuffer[2]++;
+                
+                HAL_UART_Transmit_DMA(&huart2, RxBuffer, 32);
+                HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
+                Tx_Rx_Mode_Flag = 0;
+            }
         }
 
-        if( (Tx_Rx_Mode_Flag == 1) && HAL_GPIO_ReadPin(GPIOA,4) )
-        {
-            memcpy(TxBuffer,RxBuffer,32);
-            //TxBuffer[2]++;
-            HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
-            HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
-            Tx_Rx_Mode_Flag = 0;
-        }
+        
 
 
 

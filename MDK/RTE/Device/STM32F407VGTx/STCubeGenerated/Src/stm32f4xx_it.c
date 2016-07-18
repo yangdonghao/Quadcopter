@@ -184,7 +184,7 @@ void SysTick_Handler(void)
   HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-    if ( HAL_GetTick()%300==0 )
+    if ( HAL_GetTick()%1000==0 )
     {
         Timebase_300ms_even_flag = 0;
     }
