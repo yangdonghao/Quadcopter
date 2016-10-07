@@ -334,7 +334,7 @@
               <MiscControls>--C99 --wchar32</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx,MPU9150,USE_DMP,MPL_LOG_NDEBUG=1,EMPL,EMPL_TARGET_STM32F4</Define>
               <Undefine></Undefine>
-              <IncludePath>.\RTE\Device\eMPL\driver\STM32F4;.\RTE\Device\eMPL\driver\eMPL;.\RTE\Device\eMPL\driver\include;.\RTE\Device\eMPL\eMPL-hal;.\RTE\Device\eMPL\mllite;.\RTE\Device\eMPL\mpl</IncludePath>
+              <IncludePath>.\RTE\Device\eMPL\driver\STM32F4;.\RTE\Device\eMPL\driver\eMPL;.\RTE\Device\eMPL\driver\include;.\RTE\Device\eMPL\eMPL-hal;.\RTE\Device\eMPL\mllite;.\RTE\Device\eMPL\mpl;.\RTE\Device\User</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -482,10 +482,17 @@
               <FileType>1</FileType>
               <FilePath>.\RTE\Device\eMPL\driver\STM32F4\mpu.c</FilePath>
             </File>
+            <File>
+              <FileName>UserADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RTE\Device\User\UserADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>commont.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RTE\Device\User\commont.c</FilePath>
+            </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::Board Support</GroupName>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
@@ -506,12 +513,6 @@
       </gpdsc>
     </gpdscs>
     <apis>
-      <api Capiversion="1.00" Cclass="Board Support" Cgroup="LED" exclusive="0">
-        <package name="MDK-Middleware" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="7.0.0"/>
-        <targetInfos>
-          <targetInfo name="Target 1"/>
-        </targetInfos>
-      </api>
       <api Cclass="Device" Cgroup="STM32Cube Framework" exclusive="1">
         <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.7.0"/>
         <targetInfos>
@@ -526,8 +527,8 @@
           <targetInfo name="Target 1"/>
         </targetInfos>
       </component>
-      <component Capiversion="1.00" Cbundle="STM32F4-Discovery" Cclass="Board Support" Cgroup="LED" Cvendor="Keil" Cversion="2.0.0" condition="STM32F4 HAL GPIO">
-        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.7.0"/>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="ADC" Cvendor="Keil" Cversion="1.5.0" condition="STM32F4 HAL DMA">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.9.0"/>
         <targetInfos>
           <targetInfo name="Target 1"/>
         </targetInfos>
@@ -575,6 +576,12 @@
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RTC" Cvendor="Keil" Cversion="1.5.0" condition="STM32F4 HAL">
+        <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.9.0"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="TIM" Cvendor="Keil" Cversion="1.5.0" condition="STM32F4 HAL DMA">
         <package name="STM32F4xx_DFP" schemaVersion="1.3" url="http://www.keil.com/pack" vendor="Keil" version="2.9.0"/>
         <targetInfos>
           <targetInfo name="Target 1"/>

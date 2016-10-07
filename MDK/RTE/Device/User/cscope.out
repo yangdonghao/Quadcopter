@@ -1,0 +1,53 @@
+cscope 15 $HOME\Documents\GitHub\Quadcopter\MDK\RTE\Device\User"               0000000303
+	@UserADC.c
+
+1 
+	~"U£rADC.h
+"
+
+5 
+	$Vﬁège
+ ()
+
+7 
+	`HAL_ADC_Sèπ
+(&
+hadc1
+);
+
+8 
+AD_VÆõ
+ = 
+	`HAL_ADC_GëVÆue
+(&
+hadc1
+);
+
+11 
+	}
+}
+
+	@UserADC.h
+
+1 #i‚de‡
+__USERADC_H
+
+
+2 
+	#__USERADC_H
+
+
+	)
+
+4 
+	~"maö.h
+"
+
+	@
+1
+.
+0
+2
+20
+UserADC.c
+UserADC.h

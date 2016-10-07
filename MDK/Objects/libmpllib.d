@@ -1,1 +1,1 @@
-.\objects\libmpllib.o: RTE\Device\eMPL\mpl\libmpllib.a
+.\objects\libmpllib.o: RTE\Device\eMPL\mpl\libmpllib.lib

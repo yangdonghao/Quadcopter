@@ -1,4 +1,4 @@
-cscope 15 $HOME\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Src"               0000009047
+cscope 15 $HOME\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Src"               0000011084
 	@main.c
 
 34 
@@ -10,160 +10,208 @@ cscope 15 $HOME\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCube
 "
 
 41 
+ADC_HªdËTy³Def
+ 
+	ghadc1
+;
+
+43 
 I2C_HªdËTy³Def
  
 	ghi2c1
 ;
 
-43 
+45 
 UART_HªdËTy³Def
  
 	ghu¬t2
 ;
 
-44 
+46 
 DMA_HªdËTy³Def
  
 	ghdma_u§¹2_rx
 ;
 
-45 
+47 
 DMA_HªdËTy³Def
  
 	ghdma_u§¹2_tx
 ;
 
-49 
+51 
 ušt8_t
  
 	gTxBufãr
 [32];
 
-50 
+52 
 ušt8_t
  
-	gRxBUfãr
+	gRxBufãr
 [32];
 
-54 
+53 
+ušt8_t
+ 
+	gTx_Rx_Mode_FÏg
+;
+
+57 
 Sy¡emClock_CÚfig
 ();
 
-55 
+58 
 E¼Ü_HªdËr
 ();
 
-56 
+59 
 MX_GPIO_In™
 ();
 
-57 
+60 
 MX_DMA_In™
 ();
 
-58 
+61 
 MX_I2C1_In™
 ();
 
-59 
+62 
 MX_USART2_UART_In™
 ();
 
-70 
+63 
+MX_ADC1_In™
+();
+
+74 
 	$maš
 ()
 
-74 
+78 
 ušt32_t
  
 LED_CouÁ
  = 0;
 
-80 
+84 
 	`HAL_In™
 ();
 
-83 
+87 
 	`Sy¡emClock_CÚfig
 ();
 
-86 
+90 
 	`MX_GPIO_In™
 ();
 
-87 
+91 
 	`MX_DMA_In™
 ();
 
-88 
+92 
 	`MX_I2C1_In™
 ();
 
-89 
+93 
 	`MX_USART2_UART_In™
 ();
 
-92 
+94 
+	`MX_ADC1_In™
+();
+
+97 
 	`LED_In™Ÿlize
 ();
 
-93 
+98 
 	`LED_On
 (2);
 
-95 
+99 
+	`mpu_š™_®l
+();
+
+100 
 	`LED_On
 (3);
 
-104 iàÐ(
+102 
+	`dmp_£t_fifo_¿‹
+(200);
+
+103 
+	`šv_£t_qu©_§m¶e_¿‹
+(5000L);
+
+114 
+	`Mpu_d©a_»äesh
+();
+
+116 iàÐ(
 Timeba£_500ms_ev’_æag
  & 0x01) == 0 )
 
-106 
-TxBufãr
-[1]++;
+122 
+Timeba£_500ms_ev’_æag
+ |= 0x01;
 
-107 
+126 iàÐ(
+Timeba£_300ms_ev’_æag
+ & 0x01) == 0 )
+
+128 
+Timeba£_300ms_ev’_æag
+ |= 0x01;
+
+148 iàÐ(
+Timeba£_50ms_ev’_æag
+ & 0x01) == 0 )
+
+150 
+Timeba£_50ms_ev’_æag
+ |= 0x01;
+
+151 
 	`LED_S‘Out
 (
 LED_CouÁ
 ++);
 
-110 
-Timeba£_500ms_ev’_æag
- |= 0x01;
-
-121 
+162 
 	}
 }
 
-125 
+166 
 	$Sy¡emClock_CÚfig
 ()
 
-128 
+169 
 RCC_OscIn™Ty³Def
  
 RCC_OscIn™SŒuù
 ;
 
-129 
+170 
 RCC_ClkIn™Ty³Def
  
 RCC_ClkIn™SŒuù
 ;
 
-131 
+172 
 	`__HAL_RCC_PWR_CLK_ENABLE
 ();
 
-133 
+174 
 	`__HAL_PWR_VOLTAGESCALING_CONFIG
 (
 PWR_REGULATOR_VOLTAGE_SCALE1
 );
 
-135 
+176 
 RCC_OscIn™SŒuù
 .
 OscžÏtÜTy³
@@ -171,7 +219,7 @@ OscžÏtÜTy³
 RCC_OSCILLATORTYPE_HSI
 ;
 
-136 
+177 
 RCC_OscIn™SŒuù
 .
 HSIS‹
@@ -179,13 +227,13 @@ HSIS‹
 RCC_HSI_ON
 ;
 
-137 
+178 
 RCC_OscIn™SŒuù
 .
 HSIC®ib¿tiÚV®ue
  = 16;
 
-138 
+179 
 RCC_OscIn™SŒuù
 .
 PLL
@@ -195,7 +243,7 @@ PLLS‹
 RCC_PLL_ON
 ;
 
-139 
+180 
 RCC_OscIn™SŒuù
 .
 PLL
@@ -205,7 +253,7 @@ PLLSourû
 RCC_PLLSOURCE_HSI
 ;
 
-140 
+181 
 RCC_OscIn™SŒuù
 .
 PLL
@@ -213,15 +261,15 @@ PLL
 PLLM
  = 8;
 
-141 
+182 
 RCC_OscIn™SŒuù
 .
 PLL
 .
 PLLN
- = 84;
+ = 50;
 
-142 
+183 
 RCC_OscIn™SŒuù
 .
 PLL
@@ -231,7 +279,7 @@ PLLP
 RCC_PLLP_DIV2
 ;
 
-143 
+184 
 RCC_OscIn™SŒuù
 .
 PLL
@@ -239,7 +287,7 @@ PLL
 PLLQ
  = 4;
 
-144 ià(
+185 ià(
 	`HAL_RCC_OscCÚfig
 (&
 RCC_OscIn™SŒuù
@@ -247,11 +295,11 @@ RCC_OscIn™SŒuù
 HAL_OK
 )
 
-146 
+187 
 	`E¼Ü_HªdËr
 ();
 
-149 
+190 
 RCC_ClkIn™SŒuù
 .
 ClockTy³
@@ -261,13 +309,13 @@ RCC_CLOCKTYPE_HCLK
 RCC_CLOCKTYPE_SYSCLK
 
 
-150 |
+191 |
 RCC_CLOCKTYPE_PCLK1
 |
 RCC_CLOCKTYPE_PCLK2
 ;
 
-151 
+192 
 RCC_ClkIn™SŒuù
 .
 SYSCLKSourû
@@ -275,7 +323,7 @@ SYSCLKSourû
 RCC_SYSCLKSOURCE_PLLCLK
 ;
 
-152 
+193 
 RCC_ClkIn™SŒuù
 .
 AHBCLKDivid”
@@ -283,7 +331,7 @@ AHBCLKDivid”
 RCC_SYSCLK_DIV1
 ;
 
-153 
+194 
 RCC_ClkIn™SŒuù
 .
 APB1CLKDivid”
@@ -291,55 +339,223 @@ APB1CLKDivid”
 RCC_HCLK_DIV2
 ;
 
-154 
+195 
 RCC_ClkIn™SŒuù
 .
 APB2CLKDivid”
  = 
-RCC_HCLK_DIV4
+RCC_HCLK_DIV1
 ;
 
-155 ià(
+196 ià(
 	`HAL_RCC_ClockCÚfig
 (&
 RCC_ClkIn™SŒuù
 , 
-FLASH_LATENCY_2
+FLASH_LATENCY_1
 è!ð
 HAL_OK
 )
 
-157 
+198 
 	`E¼Ü_HªdËr
 ();
 
-160 
+201 
 	`HAL_SYSTICK_CÚfig
 (
 	`HAL_RCC_G‘HCLKF»q
 ()/1000);
 
-162 
+203 
 	`HAL_SYSTICK_CLKSourûCÚfig
 (
 SYSTICK_CLKSOURCE_HCLK
 );
 
-165 
+206 
 	`HAL_NVIC_S‘PriÜ™y
 (
 SysTick_IRQn
 , 0, 0);
 
-166 
+207 
 	}
 }
 
-169 
+210 
+	$MX_ADC1_In™
+()
+
+213 
+ADC_ChªÃlCÚfTy³Def
+ 
+sCÚfig
+;
+
+217 
+hadc1
+.
+In¡ªû
+ = 
+ADC1
+;
+
+218 
+hadc1
+.
+In™
+.
+ClockP»sÿËr
+ = 
+ADC_CLOCK_SYNC_PCLK_DIV2
+;
+
+219 
+hadc1
+.
+In™
+.
+ResÞutiÚ
+ = 
+ADC_RESOLUTION_12B
+;
+
+220 
+hadc1
+.
+In™
+.
+SÿnCÚvMode
+ = 
+DISABLE
+;
+
+221 
+hadc1
+.
+In™
+.
+CÚtšuousCÚvMode
+ = 
+DISABLE
+;
+
+222 
+hadc1
+.
+In™
+.
+DiscÚtšuousCÚvMode
+ = 
+DISABLE
+;
+
+223 
+hadc1
+.
+In™
+.
+Ex‹º®TrigCÚvEdge
+ = 
+ADC_EXTERNALTRIGCONVEDGE_NONE
+;
+
+224 
+hadc1
+.
+In™
+.
+D©aAlign
+ = 
+ADC_DATAALIGN_RIGHT
+;
+
+225 
+hadc1
+.
+In™
+.
+NbrOfCÚv”siÚ
+ = 1;
+
+226 
+hadc1
+.
+In™
+.
+DMACÚtšuousReque¡s
+ = 
+DISABLE
+;
+
+227 
+hadc1
+.
+In™
+.
+EOCS–eùiÚ
+ = 
+ADC_EOC_SINGLE_CONV
+;
+
+228 ià(
+	`HAL_ADC_In™
+(&
+hadc1
+è!ð
+HAL_OK
+)
+
+230 
+	`E¼Ü_HªdËr
+();
+
+235 
+sCÚfig
+.
+ChªÃl
+ = 
+ADC_CHANNEL_5
+;
+
+236 
+sCÚfig
+.
+Rªk
+ = 1;
+
+237 
+sCÚfig
+.
+Sam¶šgTime
+ = 
+ADC_SAMPLETIME_3CYCLES
+;
+
+238 ià(
+	`HAL_ADC_CÚfigChªÃl
+(&
+hadc1
+, &
+sCÚfig
+è!ð
+HAL_OK
+)
+
+240 
+	`E¼Ü_HªdËr
+();
+
+243 
+	}
+}
+
+246 
 	$MX_I2C1_In™
 ()
 
-172 
+249 
 hi2c1
 .
 In¡ªû
@@ -347,7 +563,7 @@ In¡ªû
 I2C1
 ;
 
-173 
+250 
 hi2c1
 .
 In™
@@ -355,7 +571,7 @@ In™
 ClockS³ed
  = 400000;
 
-174 
+251 
 hi2c1
 .
 In™
@@ -365,7 +581,7 @@ DutyCyþe
 I2C_DUTYCYCLE_16_9
 ;
 
-175 
+252 
 hi2c1
 .
 In™
@@ -373,7 +589,7 @@ In™
 OwnAdd»ss1
  = 0;
 
-176 
+253 
 hi2c1
 .
 In™
@@ -383,7 +599,7 @@ Add»ssšgMode
 I2C_ADDRESSINGMODE_7BIT
 ;
 
-177 
+254 
 hi2c1
 .
 In™
@@ -393,7 +609,7 @@ Du®Add»ssMode
 I2C_DUALADDRESS_DISABLE
 ;
 
-178 
+255 
 hi2c1
 .
 In™
@@ -401,7 +617,7 @@ In™
 OwnAdd»ss2
  = 0;
 
-179 
+256 
 hi2c1
 .
 In™
@@ -411,7 +627,7 @@ G’”®C®lMode
 I2C_GENERALCALL_DISABLE
 ;
 
-180 
+257 
 hi2c1
 .
 In™
@@ -421,7 +637,7 @@ NoSŒ‘chMode
 I2C_NOSTRETCH_DISABLE
 ;
 
-181 ià(
+258 ià(
 	`HAL_I2C_In™
 (&
 hi2c1
@@ -429,19 +645,19 @@ hi2c1
 HAL_OK
 )
 
-183 
+260 
 	`E¼Ü_HªdËr
 ();
 
-186 
+263 
 	}
 }
 
-189 
+266 
 	$MX_USART2_UART_In™
 ()
 
-192 
+269 
 hu¬t2
 .
 In¡ªû
@@ -449,7 +665,7 @@ In¡ªû
 USART2
 ;
 
-193 
+270 
 hu¬t2
 .
 In™
@@ -457,7 +673,7 @@ In™
 BaudR©e
  = 115200;
 
-194 
+271 
 hu¬t2
 .
 In™
@@ -467,7 +683,7 @@ WÜdL’gth
 UART_WORDLENGTH_8B
 ;
 
-195 
+272 
 hu¬t2
 .
 In™
@@ -477,7 +693,7 @@ StÝB™s
 UART_STOPBITS_1
 ;
 
-196 
+273 
 hu¬t2
 .
 In™
@@ -487,7 +703,7 @@ P¬™y
 UART_PARITY_NONE
 ;
 
-197 
+274 
 hu¬t2
 .
 In™
@@ -497,7 +713,7 @@ Mode
 UART_MODE_TX_RX
 ;
 
-198 
+275 
 hu¬t2
 .
 In™
@@ -507,7 +723,7 @@ HwFlowCŽ
 UART_HWCONTROL_NONE
 ;
 
-199 
+276 
 hu¬t2
 .
 In™
@@ -517,7 +733,7 @@ Ov”Sam¶šg
 UART_OVERSAMPLING_16
 ;
 
-200 ià(
+277 ià(
 	`HAL_UART_In™
 (&
 hu¬t2
@@ -525,69 +741,69 @@ hu¬t2
 HAL_OK
 )
 
-202 
+279 
 	`E¼Ü_HªdËr
 ();
 
-205 
+282 
 	}
 }
 
-210 
+287 
 	$MX_DMA_In™
 ()
 
-213 
+290 
 	`__HAL_RCC_DMA1_CLK_ENABLE
 ();
 
-217 
+294 
 	`HAL_NVIC_S‘PriÜ™y
 (
 DMA1_SŒ—m5_IRQn
 , 0, 0);
 
-218 
+295 
 	`HAL_NVIC_EÇbËIRQ
 (
 DMA1_SŒ—m5_IRQn
 );
 
-220 
+297 
 	`HAL_NVIC_S‘PriÜ™y
 (
 DMA1_SŒ—m6_IRQn
 , 0, 0);
 
-221 
+298 
 	`HAL_NVIC_EÇbËIRQ
 (
 DMA1_SŒ—m6_IRQn
 );
 
-223 
+300 
 	}
 }
 
-232 
+309 
 	$MX_GPIO_In™
 ()
 
-235 
+312 
 GPIO_In™Ty³Def
  
 GPIO_In™SŒuù
 ;
 
-238 
+315 
 	`__HAL_RCC_GPIOA_CLK_ENABLE
 ();
 
-239 
+316 
 	`__HAL_RCC_GPIOB_CLK_ENABLE
 ();
 
-242 
+319 
 GPIO_In™SŒuù
 .
 Pš
@@ -595,7 +811,7 @@ Pš
 GPIO_PIN_4
 ;
 
-243 
+320 
 GPIO_In™SŒuù
 .
 Mode
@@ -603,7 +819,7 @@ Mode
 GPIO_MODE_IT_RISING
 ;
 
-244 
+321 
 GPIO_In™SŒuù
 .
 PuÎ
@@ -611,7 +827,7 @@ PuÎ
 GPIO_NOPULL
 ;
 
-245 
+322 
 	`HAL_GPIO_In™
 (
 GPIOB
@@ -619,75 +835,75 @@ GPIOB
 GPIO_In™SŒuù
 );
 
-248 
+325 
 	`HAL_NVIC_S‘PriÜ™y
 (
 EXTI4_IRQn
 , 0, 0);
 
-249 
+326 
 	`HAL_NVIC_EÇbËIRQ
 (
 EXTI4_IRQn
 );
 
-251 
+328 
 	}
 }
 
-262 
+339 
 	$E¼Ü_HªdËr
 ()
 
-268 
+345 
 	`LED_On
 (0);
 
-269 
+346 
 	`LED_On
 (1);
 
-270 
+347 
 	`LED_On
 (2);
 
-271 
+348 
 	`LED_On
 (3);
 
-272 
+349 
 	`HAL_D–ay
 (1000);
 
-273 
+350 
 	`LED_Off
 (0);
 
-274 
+351 
 	`LED_Off
 (1);
 
-275 
+352 
 	`LED_Off
 (2);
 
-276 
+353 
 	`LED_Off
 (3);
 
-277 
+354 
 	`HAL_D–ay
 (1000);
 
-280 
+357 
 	}
 }
 
-282 #ifdeà
+359 #ifdeà
 USE_FULL_ASSERT
 
 
-291 
+368 
 	$as£¹_çžed
 (
 ušt8_t
@@ -699,7 +915,7 @@ ušt32_t
 lše
 )
 
-298 
+375 
 	}
 }
 
@@ -782,11 +998,11 @@ SysTick_IRQn
 }
 
 78 
-	$HAL_I2C_M¥In™
+	$HAL_ADC_M¥In™
 (
-I2C_HªdËTy³Def
+ADC_HªdËTy³Def
 * 
-hi2c
+hadc
 )
 
 81 
@@ -796,6 +1012,100 @@ GPIO_In™SŒuù
 ;
 
 82 if(
+hadc
+->
+In¡ªû
+==
+ADC1
+)
+
+88 
+	`__HAL_RCC_ADC1_CLK_ENABLE
+();
+
+93 
+GPIO_In™SŒuù
+.
+Pš
+ = 
+GPIO_PIN_5
+;
+
+94 
+GPIO_In™SŒuù
+.
+Mode
+ = 
+GPIO_MODE_ANALOG
+;
+
+95 
+GPIO_In™SŒuù
+.
+PuÎ
+ = 
+GPIO_NOPULL
+;
+
+96 
+	`HAL_GPIO_In™
+(
+GPIOA
+, &
+GPIO_In™SŒuù
+);
+
+103 
+	}
+}
+
+105 
+	$HAL_ADC_M¥DeIn™
+(
+ADC_HªdËTy³Def
+* 
+hadc
+)
+
+108 if(
+hadc
+->
+In¡ªû
+==
+ADC1
+)
+
+114 
+	`__HAL_RCC_ADC1_CLK_DISABLE
+();
+
+119 
+	`HAL_GPIO_DeIn™
+(
+GPIOA
+, 
+GPIO_PIN_5
+);
+
+126 
+	}
+}
+
+128 
+	$HAL_I2C_M¥In™
+(
+I2C_HªdËTy³Def
+* 
+hi2c
+)
+
+131 
+GPIO_In™Ty³Def
+ 
+GPIO_In™SŒuù
+;
+
+132 if(
 hi2c
 ->
 In¡ªû
@@ -803,7 +1113,7 @@ In¡ªû
 I2C1
 )
 
-92 
+142 
 GPIO_In™SŒuù
 .
 Pš
@@ -813,7 +1123,7 @@ GPIO_PIN_6
 GPIO_PIN_7
 ;
 
-93 
+143 
 GPIO_In™SŒuù
 .
 Mode
@@ -821,7 +1131,7 @@ Mode
 GPIO_MODE_AF_OD
 ;
 
-94 
+144 
 GPIO_In™SŒuù
 .
 PuÎ
@@ -829,7 +1139,7 @@ PuÎ
 GPIO_PULLUP
 ;
 
-95 
+145 
 GPIO_In™SŒuù
 .
 S³ed
@@ -837,7 +1147,7 @@ S³ed
 GPIO_SPEED_FREQ_VERY_HIGH
 ;
 
-96 
+146 
 GPIO_In™SŒuù
 .
 AÉ”Ç‹
@@ -845,7 +1155,7 @@ AÉ”Ç‹
 GPIO_AF4_I2C1
 ;
 
-97 
+147 
 	`HAL_GPIO_In™
 (
 GPIOB
@@ -853,15 +1163,15 @@ GPIOB
 GPIO_In™SŒuù
 );
 
-100 
+150 
 	`__HAL_RCC_I2C1_CLK_ENABLE
 ();
 
-106 
+156 
 	}
 }
 
-108 
+158 
 	$HAL_I2C_M¥DeIn™
 (
 I2C_HªdËTy³Def
@@ -869,7 +1179,7 @@ I2C_HªdËTy³Def
 hi2c
 )
 
-111 if(
+161 if(
 hi2c
 ->
 In¡ªû
@@ -877,11 +1187,11 @@ In¡ªû
 I2C1
 )
 
-117 
+167 
 	`__HAL_RCC_I2C1_CLK_DISABLE
 ();
 
-123 
+173 
 	`HAL_GPIO_DeIn™
 (
 GPIOB
@@ -891,11 +1201,11 @@ GPIO_PIN_6
 GPIO_PIN_7
 );
 
-130 
+180 
 	}
 }
 
-132 
+182 
 	$HAL_UART_M¥In™
 (
 UART_HªdËTy³Def
@@ -903,13 +1213,13 @@ UART_HªdËTy³Def
 hu¬t
 )
 
-135 
+185 
 GPIO_In™Ty³Def
  
 GPIO_In™SŒuù
 ;
 
-136 if(
+186 if(
 hu¬t
 ->
 In¡ªû
@@ -917,11 +1227,11 @@ In¡ªû
 USART2
 )
 
-142 
+192 
 	`__HAL_RCC_USART2_CLK_ENABLE
 ();
 
-148 
+198 
 GPIO_In™SŒuù
 .
 Pš
@@ -931,7 +1241,7 @@ GPIO_PIN_2
 GPIO_PIN_3
 ;
 
-149 
+199 
 GPIO_In™SŒuù
 .
 Mode
@@ -939,7 +1249,7 @@ Mode
 GPIO_MODE_AF_PP
 ;
 
-150 
+200 
 GPIO_In™SŒuù
 .
 PuÎ
@@ -947,15 +1257,15 @@ PuÎ
 GPIO_PULLUP
 ;
 
-151 
+201 
 GPIO_In™SŒuù
 .
 S³ed
  = 
-GPIO_SPEED_FREQ_VERY_HIGH
+GPIO_SPEED_FREQ_HIGH
 ;
 
-152 
+202 
 GPIO_In™SŒuù
 .
 AÉ”Ç‹
@@ -963,7 +1273,7 @@ AÉ”Ç‹
 GPIO_AF7_USART2
 ;
 
-153 
+203 
 	`HAL_GPIO_In™
 (
 GPIOA
@@ -971,7 +1281,7 @@ GPIOA
 GPIO_In™SŒuù
 );
 
-157 
+207 
 hdma_u§¹2_rx
 .
 In¡ªû
@@ -979,7 +1289,7 @@ In¡ªû
 DMA1_SŒ—m5
 ;
 
-158 
+208 
 hdma_u§¹2_rx
 .
 In™
@@ -989,7 +1299,7 @@ ChªÃl
 DMA_CHANNEL_4
 ;
 
-159 
+209 
 hdma_u§¹2_rx
 .
 In™
@@ -999,7 +1309,7 @@ DœeùiÚ
 DMA_PERIPH_TO_MEMORY
 ;
 
-160 
+210 
 hdma_u§¹2_rx
 .
 In™
@@ -1009,7 +1319,7 @@ P”hInc
 DMA_PINC_DISABLE
 ;
 
-161 
+211 
 hdma_u§¹2_rx
 .
 In™
@@ -1019,7 +1329,7 @@ MemInc
 DMA_MINC_ENABLE
 ;
 
-162 
+212 
 hdma_u§¹2_rx
 .
 In™
@@ -1029,7 +1339,7 @@ P”hD©aAlignm’t
 DMA_PDATAALIGN_BYTE
 ;
 
-163 
+213 
 hdma_u§¹2_rx
 .
 In™
@@ -1039,7 +1349,7 @@ MemD©aAlignm’t
 DMA_MDATAALIGN_BYTE
 ;
 
-164 
+214 
 hdma_u§¹2_rx
 .
 In™
@@ -1049,7 +1359,7 @@ Mode
 DMA_NORMAL
 ;
 
-165 
+215 
 hdma_u§¹2_rx
 .
 In™
@@ -1059,7 +1369,7 @@ PriÜ™y
 DMA_PRIORITY_LOW
 ;
 
-166 
+216 
 hdma_u§¹2_rx
 .
 In™
@@ -1069,7 +1379,7 @@ FIFOMode
 DMA_FIFOMODE_DISABLE
 ;
 
-167 ià(
+217 ià(
 	`HAL_DMA_In™
 (&
 hdma_u§¹2_rx
@@ -1077,11 +1387,11 @@ hdma_u§¹2_rx
 HAL_OK
 )
 
-169 
+219 
 	`E¼Ü_HªdËr
 ();
 
-172 
+222 
 	`__HAL_LINKDMA
 (
 hu¬t
@@ -1091,7 +1401,7 @@ hdm¬x
 hdma_u§¹2_rx
 );
 
-174 
+224 
 hdma_u§¹2_tx
 .
 In¡ªû
@@ -1099,7 +1409,7 @@ In¡ªû
 DMA1_SŒ—m6
 ;
 
-175 
+225 
 hdma_u§¹2_tx
 .
 In™
@@ -1109,7 +1419,7 @@ ChªÃl
 DMA_CHANNEL_4
 ;
 
-176 
+226 
 hdma_u§¹2_tx
 .
 In™
@@ -1119,7 +1429,7 @@ DœeùiÚ
 DMA_MEMORY_TO_PERIPH
 ;
 
-177 
+227 
 hdma_u§¹2_tx
 .
 In™
@@ -1129,7 +1439,7 @@ P”hInc
 DMA_PINC_DISABLE
 ;
 
-178 
+228 
 hdma_u§¹2_tx
 .
 In™
@@ -1139,7 +1449,7 @@ MemInc
 DMA_MINC_ENABLE
 ;
 
-179 
+229 
 hdma_u§¹2_tx
 .
 In™
@@ -1149,7 +1459,7 @@ P”hD©aAlignm’t
 DMA_PDATAALIGN_BYTE
 ;
 
-180 
+230 
 hdma_u§¹2_tx
 .
 In™
@@ -1159,7 +1469,7 @@ MemD©aAlignm’t
 DMA_MDATAALIGN_BYTE
 ;
 
-181 
+231 
 hdma_u§¹2_tx
 .
 In™
@@ -1169,7 +1479,7 @@ Mode
 DMA_NORMAL
 ;
 
-182 
+232 
 hdma_u§¹2_tx
 .
 In™
@@ -1179,7 +1489,7 @@ PriÜ™y
 DMA_PRIORITY_LOW
 ;
 
-183 
+233 
 hdma_u§¹2_tx
 .
 In™
@@ -1189,7 +1499,7 @@ FIFOMode
 DMA_FIFOMODE_DISABLE
 ;
 
-184 ià(
+234 ià(
 	`HAL_DMA_In™
 (&
 hdma_u§¹2_tx
@@ -1197,11 +1507,11 @@ hdma_u§¹2_tx
 HAL_OK
 )
 
-186 
+236 
 	`E¼Ü_HªdËr
 ();
 
-189 
+239 
 	`__HAL_LINKDMA
 (
 hu¬t
@@ -1211,23 +1521,23 @@ hdm©x
 hdma_u§¹2_tx
 );
 
-192 
+242 
 	`HAL_NVIC_S‘PriÜ™y
 (
 USART2_IRQn
 , 0, 0);
 
-193 
+243 
 	`HAL_NVIC_EÇbËIRQ
 (
 USART2_IRQn
 );
 
-199 
+249 
 	}
 }
 
-201 
+251 
 	$HAL_UART_M¥DeIn™
 (
 UART_HªdËTy³Def
@@ -1235,7 +1545,7 @@ UART_HªdËTy³Def
 hu¬t
 )
 
-204 if(
+254 if(
 hu¬t
 ->
 In¡ªû
@@ -1243,11 +1553,11 @@ In¡ªû
 USART2
 )
 
-210 
+260 
 	`__HAL_RCC_USART2_CLK_DISABLE
 ();
 
-216 
+266 
 	`HAL_GPIO_DeIn™
 (
 GPIOA
@@ -1257,7 +1567,7 @@ GPIO_PIN_2
 GPIO_PIN_3
 );
 
-219 
+269 
 	`HAL_DMA_DeIn™
 (
 hu¬t
@@ -1265,7 +1575,7 @@ hu¬t
 hdm¬x
 );
 
-220 
+270 
 	`HAL_DMA_DeIn™
 (
 hu¬t
@@ -1273,13 +1583,13 @@ hu¬t
 hdm©x
 );
 
-223 
+273 
 	`HAL_NVIC_Di§bËIRQ
 (
 USART2_IRQn
 );
 
-230 
+280 
 	}
 }
 
@@ -1307,171 +1617,199 @@ ušt16_t
 	gTimeba£_500ms_ev’_æag
 ;
 
-47 
-DMA_HªdËTy³Def
+42 
+ušt16_t
  
-hdma_u§¹2_rx
+	gTimeba£_300ms_ev’_æag
+;
+
+43 
+ušt16_t
+ 
+	gTimeba£_50ms_ev’_æag
 ;
 
 48 
 DMA_HªdËTy³Def
  
-hdma_u§¹2_tx
+hdma_u§¹2_rx
 ;
 
 49 
+DMA_HªdËTy³Def
+ 
+hdma_u§¹2_tx
+;
+
+50 
 UART_HªdËTy³Def
  
 hu¬t2
 ;
 
-58 
+59 
 	$NMI_HªdËr
 ()
 
-66 
+67 
 	}
 }
 
-71 
+72 
 	$H¬dFauÉ_HªdËr
 ()
 
-82 
+83 
 	}
 }
 
-87 
+88 
 	$MemMªage_HªdËr
 ()
 
-98 
+99 
 	}
 }
 
-103 
+104 
 	$BusFauÉ_HªdËr
 ()
 
-114 
+115 
 	}
 }
 
-119 
+120 
 	$U§geFauÉ_HªdËr
 ()
 
-130 
+131 
 	}
 }
 
-135 
+136 
 	$SVC_HªdËr
 ()
 
-143 
+144 
 	}
 }
 
-148 
+149 
 	$DebugMÚ_HªdËr
 ()
 
-156 
+157 
 	}
 }
 
-161 
+162 
 	$P’dSV_HªdËr
 ()
 
-169 
+170 
 	}
 }
 
-174 
+175 
 	$SysTick_HªdËr
 ()
 
-179 
+184 
 	`HAL_IncTick
 ();
 
-180 
+185 
 	`HAL_SYSTICK_IRQHªdËr
 ();
 
-182 iàÐ
+187 iàÐ
+	`HAL_G‘Tick
+()%300==0 )
+
+189 
+Timeba£_300ms_ev’_æag
+ = 0;
+
+191 iàÐ
 	`HAL_G‘Tick
 ()%500==0 )
 
-184 
+193 
 Timeba£_500ms_ev’_æag
  = 0;
 
-187 
+195 iàÐ
+	`HAL_G‘Tick
+()%50==0 )
+
+197 
+Timeba£_50ms_ev’_æag
+ = 0;
+
+200 
 	}
 }
 
-199 
+212 
 	$EXTI4_IRQHªdËr
 ()
 
-202 
+215 
 h®
 .
 Ãw_gyro
  = 1;
 
-204 
+217 
 	`HAL_GPIO_EXTI_IRQHªdËr
 (
 GPIO_PIN_4
 );
 
-208 
+221 
 	}
 }
 
-213 
+226 
 	$DMA1_SŒ—m5_IRQHªdËr
 ()
 
-218 
+231 
 	`HAL_DMA_IRQHªdËr
 (&
 hdma_u§¹2_rx
 );
 
-222 
+235 
 	}
 }
 
-227 
+240 
 	$DMA1_SŒ—m6_IRQHªdËr
 ()
 
-232 
+245 
 	`HAL_DMA_IRQHªdËr
 (&
 hdma_u§¹2_tx
 );
 
-236 
+249 
 	}
 }
 
-241 
+254 
 	$USART2_IRQHªdËr
 ()
 
-246 
+259 
 	`HAL_UART_IRQHªdËr
 (&
 hu¬t2
 );
 
-250 
+263 
 	}
 }
 

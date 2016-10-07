@@ -17,8 +17,11 @@
 ".\objects\main.o"
 ".\objects\stm32f4xx_it.o"
 ".\objects\mpu.o"
-".\objects\led_f4discovery.o"
+".\objects\useradc.o"
+".\objects\commont.o"
 ".\objects\stm32f4xx_hal.o"
+".\objects\stm32f4xx_hal_adc.o"
+".\objects\stm32f4xx_hal_adc_ex.o"
 ".\objects\stm32f4xx_hal_cortex.o"
 ".\objects\stm32f4xx_hal_dma.o"
 ".\objects\stm32f4xx_hal_dma_ex.o"
@@ -34,6 +37,8 @@
 ".\objects\stm32f4xx_hal_msp.o"
 ".\objects\startup_stm32f407xx.o"
 ".\objects\system_stm32f4xx.o"
+".\objects\stm32f4xx_hal_tim.o"
+".\objects\stm32f4xx_hal_tim_ex.o"
 --strict --scatter ".\Objects\Quadcopter.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

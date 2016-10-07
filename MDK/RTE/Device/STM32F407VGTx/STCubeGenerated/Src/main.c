@@ -38,7 +38,12 @@
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
+ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
+
 I2C_HandleTypeDef hi2c1;
+
+TIM_HandleTypeDef htim4;
 
 UART_HandleTypeDef huart2;
 DMA_HandleTypeDef hdma_usart2_rx;
@@ -49,6 +54,7 @@ DMA_HandleTypeDef hdma_usart2_tx;
 uint8_t TxBuffer[32];
 uint8_t RxBuffer[32];
 uint8_t Tx_Rx_Mode_Flag;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,6 +64,11 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_USART2_UART_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_TIM4_Init(void);
+
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+                
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -72,7 +83,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  static uint32_t LED_Count  = 0;
+   
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -88,56 +99,83 @@ int main(void)
   MX_DMA_Init();
   MX_I2C1_Init();
   MX_USART2_UART_Init();
+  MX_ADC1_Init();
+  MX_TIM4_Init();
 
   /* USER CODE BEGIN 2 */
-  LED_Initialize();
-  LED_On(2);
-  mpu_init_all();
-  LED_On(3);
-  
+   
+    
+    mpu_init_all();
+    
+
+    dmp_set_fifo_rate(200);
+    inv_set_quat_sample_rate(5000L);
+
+
+    //dmp_set_fifo_rate(10);
+    //inv_set_quat_sample_rate(100000L);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  { 
-    //时基为500ms的程序   
-    if ( (Timebase_500ms_even_flag & 0x01) == 0 )
+    while (1)
     {
-      Mpu_data_refresh();
-      //LED_SetOut(LED_Count++);
+        //HAL_UART_Receive_DMA(&huart2, RxBuffer, 2);
+        Mpu_data_refresh();
+        
+        //时基?500ms的程?
+        if ( (Timebase_500ms_even_flag & 0x01) == 0 )
+        {
 
-      Timebase_500ms_even_flag |= 0x01;
-    }
+          Voltage();
+          //Mpu_data_refresh();
+          //LED_SetOut(LED_Count++);
+          //inv_set_compass_bias_found(1);
+          //inv_set_compass_state(1);
+            Timebase_500ms_even_flag |= 0x01;
+        }
 
-    //时基为300ms的程序   
-    if ( (Timebase_300ms_even_flag & 0x01) == 0 )
-    {
-      LED_SetOut(LED_Count++);
-      
-      if(Tx_Rx_Mode_Flag == 0)
-      {
-       //串口数据
-       //0：
-       //1~16：log_stm32.c -> L119 -> quat
-        HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
-        Tx_Rx_Mode_Flag = 1;
-      }
-      else
-      { 
-        HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
-        Tx_Rx_Mode_Flag = 0;
-      } 
-      
-      Timebase_300ms_even_flag |= 0x01;
-    }
+        //时基?300ms的程?
+        if ( (Timebase_300ms_even_flag & 0x01) == 0 )
+        {
+            Timebase_300ms_even_flag |= 0x01;
+            //LED_SetOut(LED_Count++);
+            //  Mpu_data_refresh();
+            /*if(Tx_Rx_Mode_Flag == 0)
+            {
+             //串口数据
+             //0?
+             //1~16：log_stm32.c -> L119 -> quat
+              HAL_UART_Transmit_DMA(&huart2, TxBuffer, 32);
+              Tx_Rx_Mode_Flag = 1;
+            }
+            else
+            {
+              HAL_UART_Receive_DMA(&huart2, RxBuffer, 32);
+              Tx_Rx_Mode_Flag = 0;
+            }
 
+            */
+        }
 
+        if ( (Timebase_50ms_even_flag & 0x01) == 0 )
+        {
+            Timebase_50ms_even_flag |= 0x01;
+         
+            //Mpu_data_refresh();
+        }
+
+        if ( (Timebase_2000ms_even_flag & 0x01) == 0 )
+        {
+            
+            Timebase_2000ms_even_flag |= 0x01;
+            //Mpu_data_refresh();
+        }
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
 
-  }
+    }
   /* USER CODE END 3 */
 
 }
@@ -187,6 +225,42 @@ void SystemClock_Config(void)
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
+/* ADC1 init function */
+static void MX_ADC1_Init(void)
+{
+
+  ADC_ChannelConfTypeDef sConfig;
+
+    /**Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion) 
+    */
+  hadc1.Instance = ADC1;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
+  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.ScanConvMode = DISABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.DiscontinuousConvMode = DISABLE;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
+  hadc1.Init.NbrOfConversion = 1;
+  hadc1.Init.DMAContinuousRequests = DISABLE;
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+    /**Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time. 
+    */
+  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Rank = 1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+}
+
 /* I2C1 init function */
 static void MX_I2C1_Init(void)
 {
@@ -204,6 +278,58 @@ static void MX_I2C1_Init(void)
   {
     Error_Handler();
   }
+
+}
+
+/* TIM4 init function */
+static void MX_TIM4_Init(void)
+{
+
+  TIM_MasterConfigTypeDef sMasterConfig;
+  TIM_OC_InitTypeDef sConfigOC;
+
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 0;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = 0;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  if (HAL_TIM_PWM_Init(&htim4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_PWM_ConfigChannel(&htim4, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  HAL_TIM_MspPostInit(&htim4);
 
 }
 
@@ -233,6 +359,7 @@ static void MX_DMA_Init(void)
 {
   /* DMA controller clock enable */
   __HAL_RCC_DMA1_CLK_ENABLE();
+  __HAL_RCC_DMA2_CLK_ENABLE();
 
   /* DMA interrupt init */
   /* DMA1_Stream5_IRQn interrupt configuration */
@@ -241,6 +368,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
+  /* DMA2_Stream0_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
 
 }
 
@@ -258,6 +388,7 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin : PB4 */
@@ -284,20 +415,10 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler */
-  /* User can add his own implementation to report the HAL error return state */
-  while (1)
-  {
-    LED_On(0);
-    LED_On(1);
-    LED_On(2);
-    LED_On(3);
-    HAL_Delay(1000);
-    LED_Off(0);
-    LED_Off(1);
-    LED_Off(2);
-    LED_Off(3);
-    HAL_Delay(1000);
-  }
+    /* User can add his own implementation to report the HAL error return state */
+    while (1)
+    {
+    }
   /* USER CODE END Error_Handler */ 
 }
 
@@ -313,8 +434,8 @@ void Error_Handler(void)
 void assert_failed(uint8_t* file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
-  /* User can add his own implementation to report the file name and line number,
-    ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+    /* User can add his own implementation to report the file name and line number,
+      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 
 }

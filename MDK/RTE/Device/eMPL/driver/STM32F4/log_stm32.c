@@ -39,6 +39,7 @@
 #define PACKET_QUAT     (2)
 #define PACKET_DATA     (3)
 
+extern UART_HandleTypeDef huart2;
 /**
  *  @brief      Prints a variable argument log message.
  *  USB output will be formatted as follows:\n
@@ -100,7 +101,7 @@ int _MLPrintLog (int priority, const char* tag, const char* fmt, ...)
 		memset(out+3, 0, 18);
 		memcpy(out+3, buf+ii, this_length);
 		
-		//USBD_CDC_SetTxBuffer (&hUsbDeviceFS, (uint8_t *)buf, PACKET_LENGTH);
+		//USBD_CDC_SetTxBuffer (&hUsbDeviceFS, (uint8_t *)out, PACKET_LENGTH);
 		//USBD_CDC_TransmitPacket (&hUsbDeviceFS);
 	}
 					
@@ -111,47 +112,32 @@ int _MLPrintLog (int priority, const char* tag, const char* fmt, ...)
 
 void eMPL_send_quat(long *quat)
 {
-	//	char out[18];
+//	char out[PACKET_LENGTH];
 	
 	if (!quat)
 		return;
-	
-	/*memset(out, 0, 18);
-	out[0] = '$';
-	out[1] = PACKET_QUAT;
-	out[2] = (char)(quat[0] >> 24);
-	out[3] = (char)(quat[0] >> 16);
-	out[4] = (char)(quat[0] >> 8);
-	out[5] = (char)quat[0];
-	out[6] = (char)(quat[1] >> 24);
-	out[7] = (char)(quat[1] >> 16);
-	out[8] = (char)(quat[1] >> 8);
-	out[9] = (char)quat[1];
-	out[10] = (char)(quat[2] >> 24);
-	out[11] = (char)(quat[2] >> 16);
-	out[12] = (char)(quat[2] >> 8);
-	out[13] = (char)quat[2];
-	out[14] = (char)(quat[3] >> 24);
-	out[15] = (char)(quat[3] >> 16);
-	out[16] = (char)(quat[3] >> 8);
-	out[17] = (char)quat[3];*/
-	TxBuffer[1]  = (char)(quat[0] >> 24);
-	TxBuffer[2]  = (char)(quat[0] >> 16);
-	TxBuffer[3]  = (char)(quat[0] >> 8);
-	TxBuffer[4]  = (char)quat[0];
-	TxBuffer[5]  = (char)(quat[1] >> 24);
-	TxBuffer[6]  = (char)(quat[1] >> 16);
-	TxBuffer[7]  = (char)(quat[1] >> 8);
-	TxBuffer[8]  = (char)quat[1];
-	TxBuffer[9]  = (char)(quat[2] >> 24);
-	TxBuffer[10] = (char)(quat[2] >> 16);
-	TxBuffer[11] = (char)(quat[2] >> 8);
-	TxBuffer[12] = (char)quat[2];
-	TxBuffer[13] = (char)(quat[3] >> 24);
-	TxBuffer[14] = (char)(quat[3] >> 16);
-	TxBuffer[15] = (char)(quat[3] >> 8);
-	TxBuffer[16] = (char)quat[3];
-	
+    memset(TxBuffer, 0, PACKET_LENGTH);	
+	  TxBuffer[0] = '$';
+    TxBuffer[1] = PACKET_QUAT;
+    TxBuffer[3] = (char)(quat[0] >> 24);
+    TxBuffer[4] = (char)(quat[0] >> 16);
+    TxBuffer[5] = (char)(quat[0] >> 8);
+    TxBuffer[6] = (char)quat[0];
+    TxBuffer[7] = (char)(quat[1] >> 24);
+    TxBuffer[8] = (char)(quat[1] >> 16);
+    TxBuffer[9] = (char)(quat[1] >> 8);
+    TxBuffer[10] = (char)quat[1];
+    TxBuffer[11] = (char)(quat[2] >> 24);
+    TxBuffer[12] = (char)(quat[2] >> 16);
+    TxBuffer[13] = (char)(quat[2] >> 8);
+    TxBuffer[14] = (char)quat[2];
+    TxBuffer[15] = (char)(quat[3] >> 24);
+    TxBuffer[16] = (char)(quat[3] >> 16);
+    TxBuffer[17] = (char)(quat[3] >> 8);
+    TxBuffer[18] = (char)quat[3];
+    TxBuffer[21] = '\r';
+    TxBuffer[22] = '\n';
+	HAL_UART_Transmit_DMA(&huart2, TxBuffer, PACKET_LENGTH);
 	//USBD_CDC_SetTxBuffer (&hUsbDeviceFS, (uint8_t *)out, 18);
 	//USBD_CDC_TransmitPacket (&hUsbDeviceFS);
 }
@@ -163,12 +149,12 @@ void eMPL_send_data(unsigned char type, long *data)
 	if (!data)
 		return;
 	
-	memset(out, 0, PACKET_LENGTH);
-	out[0] = '$';
-	out[1] = PACKET_DATA;
-	out[2] = type;
-	out[21] = '\r';
-	out[22] = '\n';
+	memset(TxBuffer, 0, PACKET_LENGTH);
+	TxBuffer[0] = '$';
+	TxBuffer[1] = PACKET_DATA;
+	TxBuffer[2] = type;
+	TxBuffer[21] = '\r';
+	TxBuffer[22] = '\n';
 	switch (type) {
 	/* Two bytes per-element. */
 	case PACKET_DATA_ROT:
@@ -217,15 +203,15 @@ void eMPL_send_data(unsigned char type, long *data)
 		out[14] = (char)data[2];
 		break;
 	case PACKET_DATA_HEADING:
-		out[3] = (char)(data[0] >> 24);
-		out[4] = (char)(data[0] >> 16);
-		out[5] = (char)(data[0] >> 8);
-		out[6] = (char)data[0];
+		TxBuffer[3] = (char)(data[0] >> 24);
+		TxBuffer[4] = (char)(data[0] >> 16);
+		TxBuffer[5] = (char)(data[0] >> 8);
+		TxBuffer[6] = (char)data[0];
 		break;
 	default:
 		return;
 	}
-	
+	HAL_UART_Transmit_DMA(&huart2, TxBuffer, PACKET_LENGTH);
 	//USBD_CDC_SetTxBuffer (&hUsbDeviceFS, (uint8_t *)out, PACKET_LENGTH);
 	//USBD_CDC_TransmitPacket (&hUsbDeviceFS);
 }

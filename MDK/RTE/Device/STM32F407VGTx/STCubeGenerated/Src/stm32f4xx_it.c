@@ -40,10 +40,13 @@
 
 uint16_t Timebase_500ms_even_flag;
 uint16_t Timebase_300ms_even_flag;
+uint16_t Timebase_50ms_even_flag;
+uint16_t Timebase_2000ms_even_flag;
 
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DMA_HandleTypeDef hdma_adc1;
 extern DMA_HandleTypeDef hdma_usart2_rx;
 extern DMA_HandleTypeDef hdma_usart2_tx;
 extern UART_HandleTypeDef huart2;
@@ -174,11 +177,11 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-   //配置理解：HAL_SYSTICK_Config--设置多少次时钟源产生�?次嘀嗒中�?
-   //          输入参数�?--HAL_RCC_GetHCLKFreq()/1000
-   //          HAL_SYSTICK_CLKSourceConfig--设置时钟�?
-   //          假设 HCLK �? 100 Mhz，当100M/1000=100K 次时钟源跳动产生�?次中�?
-   //          该设置保�? �?嗒中�? 始终�? 1 ms
+   //閰嶇疆鐞嗚В锛欻AL_SYSTICK_Config--璁剧疆澶氬皯娆℃椂閽熸簮浜х敓�??娆�?�榾鍡掍腑鏂?
+   //          杈撳叆鍙傛暟�??--HAL_RCC_GetHCLKFreq()/1000
+   //          HAL_SYSTICK_CLKSourceConfig--璁剧疆鏃堕挓�??
+   //          鍋囪�? HCLK �?? 100 Mhz锛屽�?100M/1000=100K 娆℃椂閽熸簮璺冲姩浜х敓涓?娆�?�腑�??
+   //          璇ヨ缃繚�?? �??鍡掍腑鏂? 濮嬬粓涓? 1 ms
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
@@ -190,6 +193,14 @@ void SysTick_Handler(void)
   if ( HAL_GetTick()%500==0 )
   {
     Timebase_500ms_even_flag = 0;
+  }
+  if ( HAL_GetTick()%2000==0 )
+  {
+    Timebase_2000ms_even_flag = 0;
+  }
+	if ( HAL_GetTick()%50==0 )
+  {
+    Timebase_50ms_even_flag = 0;
   }
   /* USER CODE END SysTick_IRQn 1 */
 }
@@ -255,6 +266,20 @@ void USART2_IRQHandler(void)
   /* USER CODE BEGIN USART2_IRQn 1 */
 
   /* USER CODE END USART2_IRQn 1 */
+}
+
+/**
+* @brief This function handles DMA2 stream0 global interrupt.
+*/
+void DMA2_Stream0_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA2_Stream0_IRQn 0 */
+
+  /* USER CODE END DMA2_Stream0_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc1);
+  /* USER CODE BEGIN DMA2_Stream0_IRQn 1 */
+
+  /* USER CODE END DMA2_Stream0_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

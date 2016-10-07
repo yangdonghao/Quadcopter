@@ -66,3 +66,21 @@
 直接在初始化赋值内存地址，程序运行中自动更新内存地址数据，无需用户操作
 
 ![串口DMA优化](Readme/pic/串口DMA优化.png)
+
+###MPU9150
+九轴融合重要函数
+![九轴融合重要函数](Readme/pic/九轴融合重要函数.png)
+![九轴融合重要函数1](Readme/pic/九轴融合重要函数1.png)
+
+inv_store_gaming_quaternion
+
+**inv_set_compass_correction**
+
+两个函数为6轴和地磁数据，之后在
+inv_get_quaternion
+融合
+
+调用关系图（Keil汇编查看）
+inv_set_compass_correction(72) <--inv_set_compass_bias_found(358) <--inv_set_compass_bias_error(382) <--inv_set_compass_disturbance(476) <--inv_set_compass_bias(462) <--inv_set_accel_sample_rate(232) <--
+
+

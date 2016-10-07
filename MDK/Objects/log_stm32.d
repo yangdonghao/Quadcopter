@@ -11,8 +11,8 @@
 .\objects\log_stm32.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
 .\objects\log_stm32.o: .\RTE\Device\eMPL\driver\include\log.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
-.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\stm32f4xx_hal_conf.h
-.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\mxconstants.h
+.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\stm32f4xx_hal_conf.h
+.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\mxconstants.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
@@ -31,6 +31,8 @@
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h
+.\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h
+.\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h
@@ -38,8 +40,10 @@
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h
+.\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
+.\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
 .\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
-.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\main.h
+.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\main.h
 .\objects\log_stm32.o: .\RTE\Device\eMPL\driver\STM32F4\mpu.h
 .\objects\log_stm32.o: .\RTE\Device\eMPL\driver\eMPL\inv_mpu.h
 .\objects\log_stm32.o: .\RTE\Device\eMPL\driver\eMPL\inv_mpu_dmp_motion_driver.h
@@ -68,4 +72,6 @@
 .\objects\log_stm32.o: .\RTE\Device\eMPL\mpl\quaternion_supervisor.h
 .\objects\log_stm32.o: .\RTE\Device\eMPL\eMPL-hal\eMPL_outputs.h
 .\objects\log_stm32.o: .\RTE\Device\eMPL\driver\STM32F4\mpu.h
-.\objects\log_stm32.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Board\Board_LED.h
+.\objects\log_stm32.o: .\RTE\Device\User\UserADC.h
+.\objects\log_stm32.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\main.h
+.\objects\log_stm32.o: .\RTE\Device\User\commont.h

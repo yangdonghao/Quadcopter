@@ -10,8 +10,8 @@
 .\objects\inv_mpu_dmp_motion_driver.o: RTE\Device\eMPL\driver\eMPL\dmpmap.h
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\driver\STM32F4\stm32f4xx_empl_drv.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
-.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\stm32f4xx_hal_conf.h
-.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\mxconstants.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\stm32f4xx_hal_conf.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\mxconstants.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
@@ -30,6 +30,8 @@
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h
@@ -37,8 +39,10 @@
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
 .\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
-.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub2\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\main.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\main.h
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\driver\STM32F4\mpu.h
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\mllite\invensense.h
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\mllite\data_builder.h
@@ -71,4 +75,6 @@
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\eMPL-hal\eMPL_outputs.h
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\driver\STM32F4\mpu.h
 .\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\eMPL\driver\STM32F4\packet.h
-.\objects\inv_mpu_dmp_motion_driver.o: C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.1.0\Board\Board_LED.h
+.\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\User\UserADC.h
+.\objects\inv_mpu_dmp_motion_driver.o: C:\Users\YDH\Documents\GitHub\Quadcopter\MDK\RTE\Device\STM32F407VGTx\STCubeGenerated\Inc\main.h
+.\objects\inv_mpu_dmp_motion_driver.o: .\RTE\Device\User\commont.h
